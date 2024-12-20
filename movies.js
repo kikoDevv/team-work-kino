@@ -9,7 +9,7 @@
  * @param {*} title The title to the card. Should be read from json.
  * @param {*} addMovieCardTo Wich element the moviecard should be appended to. 
  */
-function createCard (url, title, addMovieCardTo) {
+function createMovieCard (url, title, addMovieCardTo) {
 
     // create wrapper to contain moviecard
     const movieWrapper = document.createElement('article');
@@ -18,7 +18,7 @@ function createCard (url, title, addMovieCardTo) {
     //MovieImage
     const movieImage = document.createElement('img');
     movieImage.classList.add('movieImage');
-    movieImage.alt = "";
+    movieImage.alt = "a movie";
     movieImage.src = url;
 
     // create header 2 for title
@@ -52,3 +52,5 @@ function createCard (url, title, addMovieCardTo) {
     //append movieWrapper to body
     addMovieCardTo.append(movieWrapper);
 }
+
+export { createMovieCard }
