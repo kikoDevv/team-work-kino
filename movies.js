@@ -3,22 +3,23 @@
  * @author Marcus
  */
 
-function createCard () {
+function createCard (url, title, addMovieCardTo) {
 
-    //TODO: Create wrapper contain everything per
     // create wrapper to contain moviecard
     const movieWrapper = document.createElement('article');
     movieWrapper.classList.add('movieWrapper');
 
     //MovieImage
     const movieImage = document.createElement('img');
+    movieImage.classList.add('movieImage');
+    movieImage.alt = "";
+    movieImage.src = url;
     // create header 2 for title
     const movieTitle = document.createElement('h2');
-    movieTitle.innerHTML = 'Should be added through json';
+    movieTitle.innerHTML = title;
 
     // create button for movie cards
     const movieBtn = document.createElement('button');
-    // added class "movieBtn" should be used to style everything TODO: delete this comment after style
     movieBtn.classList.add('movieBtn');
 
     // create span to append into movieBtn
@@ -41,11 +42,13 @@ function createCard () {
     movieWrapper.append(movieBtn);
 
     //append movieWrapper to body
-    document.querySelector('body').append(movieWrapper)
+    addMovieCardTo.append(movieWrapper);
 
 
 
 
 }
 
-createCard();
+//example how it should be used later
+const containerMovieCard = document.querySelector('body');
+createCard("urlAdress", "Movie Title", containerMovieCard);
