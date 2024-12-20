@@ -3,6 +3,12 @@
  * @author Marcus
  */
 
+/**
+ * Function that creates a card with diffrent classes to style from.
+ * @param {*} url The url that should be added to image element. (should be read from json)
+ * @param {*} title The title to the card. Should be read from json.
+ * @param {*} addMovieCardTo Wich element the moviecard should be appended to. 
+ */
 function createCard (url, title, addMovieCardTo) {
 
     // create wrapper to contain moviecard
@@ -14,8 +20,10 @@ function createCard (url, title, addMovieCardTo) {
     movieImage.classList.add('movieImage');
     movieImage.alt = "";
     movieImage.src = url;
+
     // create header 2 for title
     const movieTitle = document.createElement('h2');
+    movieTitle.classList.add('movieCardHeader');
     movieTitle.innerHTML = title;
 
     // create button for movie cards
@@ -43,12 +51,4 @@ function createCard (url, title, addMovieCardTo) {
 
     //append movieWrapper to body
     addMovieCardTo.append(movieWrapper);
-
-
-
-
 }
-
-//example how it should be used later
-const containerMovieCard = document.querySelector('body');
-createCard("urlAdress", "Movie Title", containerMovieCard);
