@@ -5,13 +5,14 @@ $textColor: #ffffff;
 * {
   margin: 0px;
   padding: 0px;
+  font-family: "Roboto", serif;
 }
 
 .skiReviewerSection {
   background-color: $backgroundColor;
   width: 100vw;
   display: flex;
-  gap: 10px;
+  gap: 1rem;
   justify-content: center;
 }
 
