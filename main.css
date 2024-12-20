@@ -1,3 +1,19 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
 
+.skiReviewerSection {
+  background-color: #0e0e1b;
+  width: 100vw;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.skiReviewer {
+  width: 25vw;
+  border-radius: 20%;
+}
 
 /*# sourceMappingURL=main.css.map */
