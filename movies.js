@@ -4,7 +4,7 @@
  */
 
 /**
- * Function that creates a card with diffrent classes to style from.
+ * Function that creates a moviecard with diffrent classes to style from and then appends it to a specific element.
  * @param {*} url The url that should be added to image element. (should be read from json)
  * @param {*} title The title to the card. Should be read from json.
  * @param {*} addMovieCardTo Wich element the moviecard should be appended to. 
