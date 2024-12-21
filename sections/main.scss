@@ -20,3 +20,7 @@ $textColor: #ffffff;
   width: 25vw;
   border-radius: 20%;
 }
+$backgroundColor: #0E0E1B;
+$buttonColor: #175DCC;
+$textColor: #FFFFFF;
+@use "movieCards.scss" as *;
