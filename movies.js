@@ -2,7 +2,7 @@
  * @module create movie cards module
  * @author Marcus
  */
-const m = 0;
+
 const movieCard = {
     /**
      * Function that creates a moviecard with diffrent classes to style from and then appends it to a specific element.
