@@ -11,7 +11,6 @@ const movieCard = {
      * @param {*} addMovieCardTo Wich element the moviecard should be appended to.
      */
     createMovieCard (url, title, addMovieCardTo) {
-
         // create wrapper to contain moviecard
         const movieWrapper = document.createElement('article');
         movieWrapper.classList.add('movieWrapper');
