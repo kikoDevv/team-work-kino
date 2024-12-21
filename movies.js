@@ -52,6 +52,16 @@ const movieCard = {
 
         //append movieWrapper to body
         addMovieCardTo.append(movieWrapper);
+    },
+    /**
+     * Function to load create movie cards from the data in an array
+     * @param {*} array Information to load data from.
+     */
+    createMovieCardsFromArray (array, appendMovieCardTo) {
+
+        array.forEach(element => {
+            this.createMovieCard(element.image, element.title, appendMovieCardTo);
+        });
     }
 };
 

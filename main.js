@@ -1,8 +1,26 @@
 import { movieCard } from "./movies.js";
 
-//append one movie card to figure element with class movies (should maybe be changed later)
-// TODO: Read url, title from json file.
-// This needs to be done after issue #81
+// to decide where movieCards should be appended
 const figureCard = document.querySelector('figure.movies');
-movieCard.createMovieCard("https://placecats.com/640/480", "Avatar", figureCard);
-movieCard.createMovieCard("https://placecats.com/640/480", "Film2", figureCard);
+
+//example array how to load data (will be changed to data from json-file)
+const array = [
+    {
+        image: "https://placecats.com/640/480",
+        comingSoon: false,
+        title: "Avatar"
+    },
+    {
+        image: "https://placecats.com/640/480",
+        comingSoon: false,
+        title: "Avatar"
+    },
+    {
+        image: "https://placecats.com/640/480",
+        comingSoon: false,
+        title: "Avatar"
+    }
+];
+
+// create cards from all the elements in an array.
+movieCard.createMovieCardsFromArray(array, figureCard);
