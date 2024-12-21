@@ -1,70 +1,59 @@
-//Function that adds all movies to an array
-async function getAllMovies(array) {
-
-    fetch("./movies.json")
-    .then(response => {
-        return response.json();
-    })
-    .then(data => {
-        data.forEach(element => {
-            array.push(element);
+const movies = {
+    allMovies: [], 
+    released: [], 
+    upcoming: [],
+    //Function that adds all movies to an array
+    async getAllMovies() {
+        
+        fetch("./movies.json")
+        .then(response => {
+            return response.json();
+        })
+        .then(data => {
+            data.forEach(element => {
+                this.allMovies.push(element);
+            });
+        })
+        .catch (error => {
+            console.error('Problem fetching:', error);
         });
-        console.log(array);//Confirms that data has loaded correctly
-    })
-    .catch (error => {
-        console.error('Problem fetching:', error);
-    });
-}
+    },
 
-//Function that adds released movies to an array
-async function getReleasedMovies(array) {
+    //Function that adds released movies to an array
+    async getReleasedMovies() {
 
-    fetch("./movies.json")
-    .then(response => {
-        return response.json();
-    })
-    .then(data => {
-        data.forEach(element => {
-            if (!element.comingSoon) //Checking if comingSoon is false
-            array.push(element);
+        fetch("./movies.json")
+        .then(response => {
+            return response.json();
+        })
+        .then(data => {
+            data.forEach(element => {
+                if (!element.comingSoon) //Checking if comingSoon is false
+                this.released.push(element);
+            });
+        })
+        .catch (error => {
+            console.error('Problem fetching:', error);
         });
-        console.log(array); //Confirms that data has loaded correctly
-    })
-    .catch (error => {
-        console.error('Problem fetching:', error);
-    });
-}
+    },
 
-//Function that adds upcoming movies to an array
-async function getUpcomingMovies(array) {
+    //Function that adds upcoming movies to an array
+    async getUpcomingMovies() {
 
-    fetch("./movies.json")
-    .then(response => {
-        return response.json();
-    })
-    .then(data => {
-        data.forEach(element => {
-            if (element.comingSoon) //Checking if comingSoon is true
-            array.push(element);
+        fetch("./movies.json")
+        .then(response => {
+            return response.json();
+        })
+        .then(data => {
+            data.forEach(element => {
+                if (element.comingSoon) //Checking if comingSoon is true
+                this.upcoming.push(element);
+            });
+        })
+        .catch (error => {
+            console.error('Problem fetching:', error);
         });
-        console.log(array); //Confirms that data has loaded correctly
-
-    })
-    .catch (error => {
-        console.error('Problem fetching:', error);
-    });
-}
-
-//Example
-/* const movies = [], 
-released = [], 
-upcoming = [];
-getAllMovies(movies);
-getReleasedMovies(released);
-getUpcomingMovies(upcoming); */
-
-export {
-    getAllMovies,
-    getReleasedMovies,
-    getUpcomingMovies
+    }
 };
+
+export { movies };
