@@ -1,0 +1,49 @@
+.moviesContainer {
+   display: flex;
+   flex-wrap: wrap; // Allow wrapping to a new line
+   gap: 20px;
+   .movieCard {
+      background-color: cadetblue;
+      display: grid;
+      padding-bottom: 20px;
+      overflow: hidden;
+      border-radius: 15px;
+      cursor: pointer;
+
+      box-sizing: border-box; // Include padding and border in the element's total width and height
+      &:hover {
+         box-shadow: #101827 0px 0px 9px 0.3px;
+      }
+      .movieImg {
+         max-height: 330px;
+         min-width: 220px;
+      }
+      p {
+         place-self: center;
+      }
+      .movieBtn {
+         max-width: fit-content;
+         place-self: center;
+         padding: 4% 8%;
+         border-radius: 10px;
+         border: none;
+         cursor: pointer;
+         &:hover {
+            background-color: aqua;
+         }
+      }
+   }
+}
+
+.addBtn {
+   max-width: fit-content;
+   place-self: center;
+   padding: 2% 4%;
+   border-radius: 10px;
+   border: none;
+   margin-left: 40%;
+   cursor: pointer;
+   &:hover {
+      background-color: aqua;
+   }
+}
