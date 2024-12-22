@@ -62,6 +62,31 @@ const movieCard = {
         array.forEach(element => {
             this.createMovieCard(element.image, element.title, appendMovieCardTo);
         });
+    },
+    /**
+     * Function to create clickevent to open movieModal
+     */
+    clickEventMovieModal () {
+        const section = document.querySelectorAll('article.movieWrapper');
+
+        section.forEach(movieCard => {
+            movieCard.addEventListener('click', () => {
+                this.createMovieModal();
+            });
+        });
+    },
+    /**
+     * Function to create a movie modal.
+     */
+    createMovieModal () {
+        const movieModal = document.createElement('section');
+        movieModal.classList.add('movieModalWrapper');
+        /* movieModal.style.width = "100%";
+        movieModal.style.height = "100%";
+        movieModal.style.position = "fixed";
+        movieModal.style.top = "0px";
+        movieModal.style.backgroundColor = "#0E0E1B"; */
+        document.querySelector('body').append(movieModal);
     }
 };
 
