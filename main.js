@@ -7,16 +7,19 @@ const figureCard = document.querySelector('figure.movies');
 //example array how to load data (will be changed to data from json-file)
 const array = [
     {
+        id: 1,
         image: "https://placecats.com/640/480",
         comingSoon: false,
         title: "Avatar"
     },
     {
+        id: 2,
         image: "https://placecats.com/640/480",
         comingSoon: false,
         title: "Avatar"
     },
     {
+        id: 3,
         image: "https://placecats.com/640/480",
         comingSoon: false,
         title: "Avatar"
@@ -26,7 +29,7 @@ const array = [
 // create cards from all the elements in an array.
 movieCard.createMovieCardsFromArray(array, figureCard);
 // opens movie modal box from movie card.
-movieCard.clickEventMovieModal();
+movieCard.clickEventMovieModal(array);
 
 // reads json file to diffrent arrays in movie objects.
 movies.getAllMovies();

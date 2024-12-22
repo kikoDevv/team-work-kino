@@ -4,6 +4,7 @@
  */
 
 const movieCard = {
+    movieInformationArray: [],
     /**
      * Function that creates a moviecard with diffrent classes to style from and then appends it to a specific element.
      * @param {*} url The url that should be added to image element. (should be read from json).
@@ -65,13 +66,15 @@ const movieCard = {
     },
     /**
      * Function to create clickevent to open movieModal
+     * @param {*} searchArray Array to find all the information that matches the id from. 
      */
-    clickEventMovieModal () {
+    clickEventMovieModal (searchArray) {
         const section = document.querySelectorAll('article.movieWrapper');
 
         section.forEach(movieCard => {
             movieCard.addEventListener('click', () => {
                 this.createMovieModal();
+                this.getInfoToMovieModal(1, searchArray);
             });
         });
     },
@@ -87,7 +90,19 @@ const movieCard = {
         movieModal.style.top = "0px";
         movieModal.style.backgroundColor = "#0E0E1B"; */
         document.querySelector('body').append(movieModal);
+    },
+    /**
+     * Function that dynamically append information to movie modal
+     * @param {*} idValue 
+     * @param {*} searchArray 
+     */
+    getInfoToMovieModal (idValue, searchArray) {
+        const modalMovie = searchArray.filter((movie) => movie.id == idValue);
+        this.movieInformationArray = modalMovie;
+        console.log(this.movieInformationArray);
+
     }
 };
+
 
 export { movieCard };
