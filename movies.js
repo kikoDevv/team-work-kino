@@ -6,15 +6,17 @@
 const movieCard = {
     movieInformationArray: [],
     /**
-     * Function that creates a moviecard with diffrent classes to style from and then appends it to a specific element.
+     * 
+     * @param {*} movieId Will be used to append full information about the movie later.
      * @param {*} url The url that should be added to image element. (should be read from json).
      * @param {*} title The title to the card. Should be read from json.
      * @param {*} addMovieCardTo Wich element the moviecard should be appended to.
      */
-    createMovieCard (url, title, addMovieCardTo) {
+    createMovieCard (movieId, url, title, addMovieCardTo) {
 
         // create wrapper to contain moviecard
         const movieWrapper = document.createElement('article');
+        movieWrapper.id = movieId
         movieWrapper.classList.add('movieWrapper');
 
         //MovieImage
@@ -59,22 +61,25 @@ const movieCard = {
      * @param {*} array Information to load data from.
      */
     createMovieCardsFromArray (array, appendMovieCardTo) {
-
         array.forEach(element => {
-            this.createMovieCard(element.image, element.title, appendMovieCardTo);
+            this.createMovieCard(element.id, element.image, element.title, appendMovieCardTo);
         });
     },
     /**
      * Function to create clickevent to open movieModal
      * @param {*} searchArray Array to find all the information that matches the id from. 
      */
-    clickEventMovieModal (searchArray) {
+    clickEventMovieModal (movieArray) {
         const section = document.querySelectorAll('article.movieWrapper');
 
+        //TODO: idValue shold be fetched from movieCard
         section.forEach(movieCard => {
             movieCard.addEventListener('click', () => {
+                const movieId = parseInt(movieCard.id)
                 this.createMovieModal();
-                this.getInfoToMovieModal(1, searchArray);
+
+                // To append info to movie modal
+                this.getInfoToMovieModal(movieId, movieArray);
             });
         });
     },
@@ -97,10 +102,10 @@ const movieCard = {
      * @param {*} searchArray 
      */
     getInfoToMovieModal (idValue, searchArray) {
+        console.log(idValue)
         const modalMovie = searchArray.filter((movie) => movie.id == idValue);
         this.movieInformationArray = modalMovie;
-        console.log(this.movieInformationArray);
-
+        console.log(this.movieInformationArray)
     }
 };
 
