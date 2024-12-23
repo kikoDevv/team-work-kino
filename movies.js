@@ -270,12 +270,12 @@ const movieCard = {
         //h1 title
         const descTitle = document.createElement('h1');
         descTitle.classList.add('rightTitle');
-        descTitle.innerHTML = infoArray[0].title
+        descTitle.innerHTML = infoArray[0].title;
 
         //Description and div
-        const descDiv = document.createElement('div')
+        const descDiv = document.createElement('div');
         descDiv.classList.add('descriptionContainer');
-        
+
         const rightPara = document.createElement('p');
         rightPara.innerHTML = infoArray[0].description;
 
@@ -283,14 +283,18 @@ const movieCard = {
 
         //Append to right column info
         rightInfo.append(descTitle);
-        rightInfo.append(descDiv)
+        rightInfo.append(descDiv);
 
         //append container info
         infoContainer.append(leftInfo);
         infoContainer.append(rightInfo);
 
+        //create for exit div
+        const exitDiv = document.createElement('div');
+        exitDiv.classList.add('exitContainer');
 
         // append to movieContent
+        movieContent.append(exitDiv);
         movieContent.append(mediaWrapper);
         movieContent.append(infoContainer);
 
