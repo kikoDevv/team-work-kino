@@ -20,3 +20,12 @@ $textColor: #ffffff;
   width: 25vw;
   border-radius: 20%;
 }
+
+.movieModalWrapper {
+    position: fixed;
+    background-color: $backgroundColor;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+
+}
