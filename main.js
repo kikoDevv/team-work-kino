@@ -7,7 +7,7 @@ const figureCard = document.querySelector('figure.movies');
 //example array how to load data (will be changed to data from json-file)
 const array = [
     {
-        trailer: "https://www.youtube.com/embed/5PSNL1qE6VY",
+        trailer: "https://www.youtube.com/embed/dtKMEAXyPkg",
         "id": 1,
         "comingSoon": false,
         "title": "Avatar",
@@ -27,7 +27,7 @@ const array = [
         image: "https://placecats.com/640/480",
         comingSoon: false,
         title: "Avatar",
-        trailer: "https://www.youtube.com/embed/5PSNL1qE6VY"
+        trailer: "https://www.youtube.com/embed/dtKMEAXyPkg"
     },
     {
         id: 3,

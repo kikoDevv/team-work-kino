@@ -72,7 +72,6 @@ const movieCard = {
     clickEventMovieModal (movieArray) {
         const section = document.querySelectorAll('article.movieWrapper');
 
-        //TODO: idValue shold be fetched from movieCard
         section.forEach(movieCard => {
             movieCard.addEventListener('click', () => {
                 const movieId = parseInt(movieCard.id);
@@ -122,11 +121,6 @@ const movieCard = {
         const movieTrailer = document.createElement('iframe');
         movieTrailer.classList.add('movieTrailer');
         movieTrailer.src = infoArray[0].trailer;
-        //TODO: youtube links need to be done in
-        // https://www.youtube.com/embed/5PSNL1qE6VY
-        // instead of
-        // https://www.youtube.com/watch?v=5PSNL1qE6VY
-        // like in json file.
 
         //img
         const movieImg = document.createElement('img');
@@ -146,9 +140,6 @@ const movieCard = {
         const leftInfo = document.createElement('article');
         leftInfo.classList.add('leftColumn');
 
-        /**
-         * Create button to buy ticket TODO: Maybe add this to a function.
-         */
         // create button for movie cards
         const movieBtn = document.createElement('button');
         movieBtn.classList.add('movieBtn');
@@ -165,8 +156,6 @@ const movieCard = {
         //append elements to movieBtn
         movieBtn.append(movieSpan);
         movieBtn.append(movieIcon);
-
-        /* TODO: This to a function? end of buy tickets movie button */
 
         // Create extra details info
         const extraInfo = document.createElement('article');

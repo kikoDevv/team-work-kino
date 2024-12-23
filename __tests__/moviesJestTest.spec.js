@@ -2,13 +2,6 @@ import '@testing-library/jest-dom';
 import jest from 'jest-mock';
 import { movieCard } from "../movies.js";
 
-/**
- * Might need to run following npm installs to run
- * npm install --save-dev jest
- * npm install --save-dev @testing-library/jest-dom
- * npm install --save-dev jest-environment-jsdom
- */
-
 // test for minutesHoursConverter()
 describe("Converting minutes string to string in 'h timme m minuter'", () => {
     test("Test minutesToHoursConverter (argument 0 min) '", () => {
@@ -159,5 +152,102 @@ describe("Test to check that createMovieCardsFromArray is working", () => {
 
         // Control cases
         expect(movieCard.createMovieCard).toHaveBeenCalledTimes(testArray.length);
+
+        //check that createMovieCard has been called with correct arguments.
+        expect(movieCard.createMovieCard).toHaveBeenCalledWith(
+            1,
+            "https://placecats.com/640/480",
+            "Avatar",
+            appendMovieCardTo
+        );
+
+        expect(movieCard.createMovieCard).toHaveBeenCalledWith(
+            2,
+            "https://placecats.com/640/480",
+            "I Am Legend",
+            appendMovieCardTo
+        );
+
+        expect(movieCard.createMovieCard).toHaveBeenCalledWith(
+            3,
+            "https://placecats.com/640/480",
+            "300",
+            appendMovieCardTo
+        );
+    });
+});
+
+//test appendInfoMovieModal
+describe("appendInfoMovieModal", () => {
+    let infoArray;
+
+    beforeEach(() => {
+        // Mock data för infoArray
+        infoArray = [
+            {
+                "id": 1,
+                "comingSoon": false,
+                "title": "Avatar",
+                "releaseYear": 2009,
+                "description": "A paraplegic marine dispatched to the moon Pandora on a unique mission becomes torn between following his orders and protecting the world he feels is his home.",
+                "trailer": "https://www.youtube.com/embed/5PSNL1qE6VY",
+                "image": "https://placecats.com/640/480",
+                "rating": 7.9,
+                "genre": "Action, Adventure, Fantasy",
+                "runtime": "162 min",
+                "rated": "PG-13",
+                "director": "James Cameron",
+                "actors": "Sam Worthington, Zoe Saldana, Sigourney Weaver, Stephen Lang",
+                "language": "English, Spanish"
+            },
+        ];
+
+        // create mocked dom-structure movieModal
+        document.body.innerHTML = `
+            <section class="movieModalWrapper"></section>
+        `;
+    });
+
+    it("should append movie content to the movie modal", () => {
+        // call function
+        const minutesToHoursConverter = jest.fn((minutes) => `${Math.floor(minutes / 60)}h ${minutes % 60}m`);
+        const instance = {
+            minutesToHoursConverter,
+        };
+
+        movieCard.appendInfoMovieModal.call(instance, infoArray);
+
+        // movieModalWrapper contains movieContent
+        const movieModal = document.querySelector("section.movieModalWrapper");
+        const movieContent = movieModal.querySelector(".movieContent");
+        expect(movieContent).toBeTruthy();
+
+        // mediaWrapper contains trailer and image
+        const mediaWrapper = movieContent.querySelector(".mediaWrapper");
+        const movieTrailer = mediaWrapper.querySelector(".movieTrailer");
+        const movieImg = mediaWrapper.querySelector(".movieImg");
+        expect(movieTrailer.src).toBe(infoArray[0].trailer);
+        expect(movieImg.src).toBe(infoArray[0].image);
+
+        // left column contains details.
+        const leftColumn = movieContent.querySelector(".leftColumn");
+        const movieBtn = leftColumn.querySelector(".movieBtn");
+        const extraInfo = leftColumn.querySelector(".extraInfo");
+        expect(movieBtn).toBeTruthy();
+        expect(extraInfo).toBeTruthy();
+
+        // extraInfo contains correct information
+        const releaseDesc = extraInfo.querySelector("dd.listInfo");
+        expect(releaseDesc.innerHTML).toBe(String(infoArray[0].releaseYear));
+
+        //Right column contains titel and description.
+        const rightColumn = movieContent.querySelector(".rightColumn");
+        const rightTitle = rightColumn.querySelector(".rightTitle");
+        const descriptionContainer = rightColumn.querySelector(".descriptionContainer");
+        expect(rightTitle.innerHTML).toBe(infoArray[0].title);
+        expect(descriptionContainer.textContent).toContain(infoArray[0].description);
+
+        // Runtime have been converted correctly
+        expect(minutesToHoursConverter).toHaveBeenCalledWith(infoArray[0].runtime);
     });
 });
