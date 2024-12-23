@@ -1,0 +1,108 @@
+//--------------header----------------------
+.header {
+   display: grid;
+   padding: 20px;
+   background-image: linear-gradient(100deg, #d4f1ff, #ffffff);
+   .logo-navbar {
+      display: flex;
+      .logo {
+         .kino-logo {
+            max-width: 200px;
+            max-width: 200px;
+         }
+      }
+   }
+
+   .nav-title-container {
+      // padding-top: 45px;
+      display: grid;
+      width: 100%;
+      max-height: 100px;
+      h1 {
+         margin: 0px;
+         padding-bottom: 10px;
+      }
+      .navbar-container {
+         display: flex;
+         justify-content: space-evenly;
+         align-items: center;
+         background-color: #0c0c0cfc;
+         border-radius: 0px 10px 10px 0px;
+         padding: 10px 0px;
+         z-index: 1000;
+         a {
+            color: rgb(253, 250, 250);
+            text-decoration: none;
+            font-weight: bold;
+            position: relative;
+            z-index: 0;
+            padding: 0px 5px;
+
+            &:hover {
+               color: white;
+            }
+
+            &::before {
+               content: "";
+               position: absolute;
+               left: 0;
+               top: -1px;
+               width: 100%;
+               height: 100%;
+               border-top: 1px solid white;
+               border-bottom: 1px solid white;
+               transform: scaleY(3);
+               opacity: 0;
+               transition: transform 0.5s, opacity 0.5s;
+               z-index: -1;
+            }
+
+            &:hover::before {
+               transform: scaleY(1);
+               opacity: 1;
+            }
+         }
+      }
+   }
+}
+
+//---------------------------Header-End---------------------
+//---------------------upper-section-----------------
+.upperSection {
+   position: relative;
+   .seatImg {
+      max-width: 100%;
+   }
+   .searchSection {
+      position: absolute;
+      display: flex;
+      top: 30%;
+      left: 50%;
+      transform: translateX(-50%);
+      min-width: 40vw;
+      min-height: 5vh;
+      transition:  min-width 1s ease; 
+      .searchBar {
+         min-width: 100%;
+         border-radius: 10px 0px 0px 10px;
+         border: none;
+         padding-left: 10px;
+      }
+      .searchBtn {
+         padding: 10px 20px;
+         border: none;
+         border-radius: 0px 10px 10px 0px;
+         background-color: rgb(205, 205, 205);
+         color: black;
+         cursor: pointer;
+         &:hover {
+            background-color: aquamarine;
+            color: white;
+         }
+      }
+   }
+}
+//---------------------UpperSec-end-------------
+body {
+   margin-bottom: 800px;
+}
