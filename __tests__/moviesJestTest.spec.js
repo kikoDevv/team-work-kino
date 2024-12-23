@@ -1,4 +1,5 @@
 import '@testing-library/jest-dom';
+import jest from 'jest-mock';
 import { movieCard } from "../movies.js";
 
 /**
@@ -80,5 +81,83 @@ describe("Tests to check that every dom-element is implemented from createMovieC
 
         const movieIcon = movieBtn.querySelector('.fa-money-bill-wave');
         expect(movieIcon).toBeInTheDocument();
+    });
+});
+
+// createMovieCardsFromArray
+describe("Test to check that createMovieCardsFromArray is working", () => {
+    let appendMovieCardTo;
+
+    beforeEach(() => {
+        //append cards to
+        appendMovieCardTo = document.createElement('div');
+
+        //Mock function createMovieCard to use in test createMovieCardsFromArray
+        jest.spyOn(movieCard, "createMovieCard").mockImplementation(jest.fn());
+    });
+
+    afterEach(() => {
+        movieCard.createMovieCard.mockClear();
+    });
+
+    it("should call createMovieCard for each element in the array with correct arguments", () => {
+
+        //Array to call to the function to be tested
+        const testArray = [
+            {
+                "id": 1,
+                "comingSoon": false,
+                "title": "Avatar",
+                "releaseYear": 2009,
+                "description": "A paraplegic marine dispatched to the moon Pandora on a unique mission becomes torn between following his orders and protecting the world he feels is his home.",
+                "trailer": "https://www.youtube.com/watch?v=5PSNL1qE6VY",
+                "image": "https://placecats.com/640/480",
+                "rating": 7.9,
+                "genre": "Action, Adventure, Fantasy",
+                "runtime": "162 min",
+                "rated": "PG-13",
+                "director": "James Cameron",
+                "actors": "Sam Worthington, Zoe Saldana, Sigourney Weaver, Stephen Lang",
+                "language": "English, Spanish"
+            },
+            {
+                "id": 2,
+                "comingSoon": false,
+                "title": "I Am Legend",
+                "releaseYear": 2007,
+                "description": "Years after a plague kills most of humanity and transforms the rest into monsters, the sole survivor in New York City struggles valiantly to find a cure.",
+                "trailer": "https://www.youtube.com/watch?v=dtKMEAXyPkg",
+                "image": "https://placecats.com/640/480",
+                "rating": 7.2,
+                "genre": "Drama, Horror, Sci-Fi",
+                "runtime": "101 min",
+                "rated": "PG-13",
+                "director": "Francis Lawrence",
+                "actors": "Will Smith, Alice Braga, Charlie Tahan, Salli Richardson-Whitfield",
+                "language": "English"
+            },
+            {
+                "id": 3,
+                "comingSoon": false,
+                "title": "300",
+                "releaseYear": 2006,
+                "description": "King Leonidas of Sparta and a force of 300 men fight the Persians at Thermopylae in 480 B.C.",
+                "trailer": "https://www.youtube.com/watch?v=UrIbxk7idYA",
+                "image": "https://placecats.com/640/480",
+                "rating": 7.7,
+                "genre": "Action, Drama, Fantasy",
+                "runtime": "117 min",
+                "rated": "R",
+                "director": "Zack Snyder",
+                "actors": "Gerard Butler, Lena Headey, Dominic West, David Wenham",
+                "language": "English"
+            }
+        ];
+
+        // call function to test
+        movieCard.createMovieCardsFromArray(testArray, appendMovieCardTo);
+
+        // Control cases
+        expect(movieCard.createMovieCard).toHaveBeenCalledTimes(testArray.length);
     });
 });
