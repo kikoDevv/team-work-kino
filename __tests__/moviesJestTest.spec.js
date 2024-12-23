@@ -1,6 +1,13 @@
 import '@testing-library/jest-dom';
 import { movieCard } from "../movies.js";
 
+/**
+ * Might need to run following npm installs to run
+ * npm install --save-dev jest
+ * npm install --save-dev @testing-library/jest-dom
+ * npm install --save-dev jest-environment-jsdom
+ */
+
 // test for minutesHoursConverter()
 describe("Converting minutes string to string in 'h timme m minuter'", () => {
     test("Test minutesToHoursConverter (argument 0 min) '", () => {
