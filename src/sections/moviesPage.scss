@@ -74,14 +74,18 @@
       max-width: 100%;
    }
    .searchSection {
-      position: absolute;
       display: flex;
-      top: 30%;
-      left: 50%;
+      position: absolute;
+      top: 45%;
+      left:48%;
       transform: translateX(-50%);
       min-width: 40vw;
       min-height: 5vh;
-      transition:  min-width 1s ease; 
+      // overflow: hidden;
+      animation: shrink both;
+      animation-timeline: view();
+      // animation-range-start: 350px;
+      // animation-range-end: 50px;
       .searchBar {
          min-width: 100%;
          border-radius: 10px 0px 0px 10px;
@@ -103,6 +107,18 @@
    }
 }
 //---------------------UpperSec-end-------------
+@keyframes shrink{
+   0%{
+      min-width: 40vw;
+   }
+   100%{
+      min-width: 20vw;
+   }
+}
+
+
+
+
 body {
    margin-bottom: 800px;
 }
