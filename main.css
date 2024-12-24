@@ -20,6 +20,9 @@
   width: 100%;
   max-height: 100px;
 }
+.header .nav-title-container h1, .header .nav-title-container h2 {
+  color: white;
+}
 .header .nav-title-container h1 {
   margin: 0px;
   padding-bottom: 10px;
@@ -110,6 +113,7 @@
 }
 
 .filterSection {
+  overflow: x;
   position: relative;
 }
 .filterSection .highlightsImgs {
@@ -117,19 +121,20 @@
 }
 .filterSection .avatarImg {
   position: absolute;
-  max-width: 100%;
-  top: 0;
-  left: 70%;
+  max-width: 50%;
+  min-height: 50%;
+  top: 40%;
+  left: 40%;
   animation: slide both;
   animation-timeline: view();
 }
 
 @keyframes slide {
   0% {
-    left: 70%;
+    left: 40%;
   }
   100% {
-    left: 10%;
+    left: 30%;
   }
 }
 @keyframes shrink {
