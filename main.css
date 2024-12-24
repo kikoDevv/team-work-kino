@@ -71,6 +71,13 @@
 .upperSection .seatImg {
   max-width: 100%;
 }
+.upperSection .itImg {
+  max-width: 100%;
+  min-width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0px;
+}
 .upperSection .searchSection {
   display: flex;
   position: absolute;

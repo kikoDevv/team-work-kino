@@ -70,12 +70,19 @@
    }
 }
 
-//---------------------------Header-End---------------------
+//---------------------------Header-Ended---------------------
 //---------------------upper-section-----------------
 .upperSection {
    position: relative;
    .seatImg {
       max-width: 100%;
+   }
+   .itImg{
+      max-width: 100%;
+      min-width: 100%;
+      position: absolute;
+      left: 0;
+      top: 0px;
    }
    .searchSection {
       display: flex;
@@ -110,7 +117,7 @@
       }
    }
 }
-//---------------------UpperSec-end-------------
+//---------------------UpperSection-ended-------------
 @keyframes shrink {
    0% {
       min-width: 40vw;
