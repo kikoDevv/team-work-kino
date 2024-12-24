@@ -166,7 +166,7 @@ const movieCard = {
 
         // create button for movie cards
         const movieBtn = document.createElement('button');
-        movieBtn.classList.add('movieBtn');
+        movieBtn.classList.add('movieBtn', 'modalBtn');
 
         // create span to append into movieBtn
         const movieSpan = document.createElement('span');
@@ -313,12 +313,7 @@ const movieCard = {
         infoContainer.append(leftInfo);
         infoContainer.append(rightInfo);
 
-        //create for exit div
-        const exitDiv = document.createElement('div');
-        exitDiv.classList.add('exitContainer');
-
         // append to movieContent
-        movieContent.append(exitDiv);
         movieContent.append(mediaWrapper);
         movieContent.append(infoContainer);
 
