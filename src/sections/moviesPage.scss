@@ -2,13 +2,12 @@
 .header {
    display: grid;
    padding: 20px;
-   background-image: linear-gradient(100deg, #d4f1ff, #ffffff);
+   background: linear-gradient(45deg, #d2001a, #7462ff, #f48e21, #23d5ab);
+   background-size: 300% 300%;
+   animation: colorAnimation 8s ease-in-out infinite;
    .logo-navbar {
       display: flex;
       .logo {
-         background: linear-gradient(45deg, #d2001a, #7462ff, #f48e21, #23d5ab);
-         background-size: 300% 300%;
-         animation: colorAnimation 8s ease-in-out infinite;
          border-radius: 30px 30px 0px 30px;
          .kino-logo {
             max-width: 200px;
@@ -18,7 +17,6 @@
    }
 
    .nav-title-container {
-      padding-top: 14px;
       display: grid;
       width: 100%;
       max-height: 100px;
