@@ -25,6 +25,8 @@ const array = [
 
 // create cards from all the elements in an array.
 movieCard.createMovieCardsFromArray(array, figureCard);
+// opens movie modal box from movie card.
+movieCard.clickEventMovieModal();
 
 // reads json file to diffrent arrays in movie objects.
 movies.getAllMovies();
