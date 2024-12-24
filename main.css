@@ -112,21 +112,40 @@
   color: white;
 }
 
-.filterSection {
+.avatarSection {
   overflow: x;
   position: relative;
 }
-.filterSection .highlightsImgs {
+.avatarSection .highlightsImgs {
   max-width: 100%;
 }
-.filterSection .avatarImg {
+.avatarSection .avatarImg {
   position: absolute;
-  max-width: 50%;
+  max-width: 60%;
   min-height: 50%;
-  top: 40%;
+  top: 30%;
   left: 40%;
   animation: slide both;
   animation-timeline: view();
+}
+
+.filterSection {
+  position: relative;
+}
+.filterSection .filterBtn {
+  position: absolute;
+  padding: 10px 30px;
+  font-size: larger;
+  top: -27px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0px 0px 3px 0.03px;
+}
+.filterSection .filterBtn:hover {
+  background-color: #23d5ab;
 }
 
 @keyframes slide {
@@ -134,7 +153,7 @@
     left: 40%;
   }
   100% {
-    left: 30%;
+    left: 28%;
   }
 }
 @keyframes shrink {
