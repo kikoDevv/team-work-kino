@@ -20,7 +20,8 @@
   width: 100%;
   max-height: 100px;
 }
-.header .nav-title-container h1, .header .nav-title-container h2 {
+.header .nav-title-container h1,
+.header .nav-title-container h2 {
   color: white;
 }
 .header .nav-title-container h1 {
@@ -125,10 +126,67 @@
   min-height: 50%;
   top: 30%;
   left: 40%;
-  animation: slide both;
+  animation: slide both linear;
   animation-timeline: view();
 }
 
+.rollingSections {
+  display: flex;
+  justify-content: center;
+}
+.rollingSections .picsList {
+  display: flex;
+  list-style-type: none;
+  background-color: #f48e21;
+  width: 86%;
+  height: 100px;
+  padding: 10px 0px;
+  margin-inline: auto;
+  outline: 3px solid royalblue;
+  position: relative;
+  overflow: hidden;
+}
+.rollingSections .picsList .pics {
+  outline: 3px solid red;
+  left: 100%;
+  height: 90px;
+  min-width: 150px;
+  max-width: 150px;
+  position: absolute;
+  animation: scroll 30s linear infinite;
+}
+.rollingSections .picsList .pic1 {
+  animation-delay: -45s;
+  background-color: #7462ff;
+}
+.rollingSections .picsList .pic2 {
+  animation-delay: -41.25s;
+  background-color: #d2001a;
+}
+.rollingSections .picsList .pic3 {
+  animation-delay: -37.5s;
+}
+.rollingSections .picsList .pic4 {
+  animation-delay: -33.75s;
+}
+.rollingSections .picsList .pic5 {
+  animation-delay: -30s;
+}
+.rollingSections .picsList .pic6 {
+  animation-delay: -26.25s;
+}
+.rollingSections .picsList .pic7 {
+  animation-delay: -22.5s;
+}
+.rollingSections .picsList .pic8 {
+  animation-delay: -18.75s;
+}
+
+@keyframes scroll {
+  to {
+    left: -100px;
+  }
+}
 .filterSection {
   position: relative;
 }
