@@ -140,6 +140,7 @@
   place-self: center;
   font-family: "Work Sans", sans-serif;
   user-select: none;
+  color: white;
 }
 .scrollingSections .picsListDown {
   display: flex;
@@ -159,9 +160,8 @@
   max-width: 150px;
   position: absolute;
   animation: scroll 30s linear infinite;
-  background-color: #ffb509;
+  background-color: aliceblue;
   border-radius: 10px;
-  box-shadow: #101827 0px 0px 4px 0.09px;
 }
 .scrollingSections .picsListDown .pic1 {
   animation-delay: -45s;
@@ -205,9 +205,8 @@
   max-width: 150px;
   position: absolute;
   animation: scrollRight 30s linear infinite;
-  background-color: #ffb509;
+  background-color: aliceblue;
   border-radius: 10px;
-  box-shadow: #101827 0px 0px 4px 0.09px;
 }
 .scrollingSections .picsListUp .picx1 {
   animation-delay: -45s;
@@ -276,6 +275,7 @@
   box-shadow: black 0px 0px 3px 0.8px;
   border-radius: 20px;
   user-select: none;
+  background-color: aliceblue;
 }
 .filterSection .filterMenu .line {
   margin-top: 30px;
@@ -374,6 +374,7 @@
 }
 body {
   margin-bottom: 800px;
+  background-color: rgba(45, 45, 45, 0.7921568627);
 }
 
 header {
