@@ -127,7 +127,6 @@
 //---------------------UpperSection-ended-------------
 //--------------------avatarSection----------------
 .avatarSection {
-   overflow: x;
    position: relative;
    .highlightsImgs {
       max-width: 100%;
@@ -372,8 +371,11 @@
    0% {
       left: 40%;
    }
+   50% {
+      left: 20%;
+   }
    100% {
-      left: 28%;
+      left: 18%;
    }
 }
 
