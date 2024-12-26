@@ -6,12 +6,19 @@ document.addEventListener("DOMContentLoaded", () => {
     filterBtn.addEventListener("click", () => {
         if (filterMenu.classList.value === "filterMenu") {
             filterMenu.classList.remove("filterMenu");
+            filterBtn.classList.remove("fa-solid");
+            filterBtn.classList.remove("fa-xmark");
             filterMenu.classList.add("hidden");
+            filterBtn.textContent = "Filter movies";
             console.log("hidden");
         } else {
             console.log("else");
             filterMenu.classList.remove("hidden");
             filterMenu.classList.add("filterMenu");
+            filterBtn.textContent = "";
+            filterBtn.classList.add("fa-solid");
+            filterBtn.classList.add("fa-xmark");
+            filterBtn.classList.add("fa-2xl");
         }
     });
 
