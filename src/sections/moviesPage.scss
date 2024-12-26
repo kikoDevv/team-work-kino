@@ -102,20 +102,29 @@
       // animation-range-start: 350px;
       // animation-range-end: 50px;
       .searchBar {
-         border-radius: 10px 0px 0px 10px;
+         border-radius: 5px 0px 0px 5px;
          border: none;
          padding-left: 10px;
          min-width: 100%;
+         animation: roundBorderSearchBar both;
+         animation-timeline: view();
+         
+         &:focus{
+            outline: none;
+         }
       }
       .searchBtn {
          padding: 10px 20px;
          border: none;
-         border-radius: 0px 10px 10px 0px;
+         border-radius: 0px 5px 5px 0px;
          background-color: rgb(205, 205, 205);
          color: black;
          font-family: "Work Sans", sans-serif;
          font-weight: bold;
          cursor: pointer;
+         animation: roundBorderBtn both;
+         animation-timeline: view();
+
          &:hover {
             background-color: aquamarine;
             color: white;
@@ -123,7 +132,16 @@
       }
    }
 }
-
+@keyframes roundBorderSearchBar{
+   100% {
+      border-radius: 30px 0px 0px 30px;
+   }
+}
+@keyframes roundBorderBtn{
+   100%{
+      border-radius: 0px 30px 30px 0px;
+   }
+}
 //---------------------UpperSection-ended-------------
 //--------------------avatarSection----------------
 .avatarSection {
