@@ -154,7 +154,7 @@
   mask-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgb(0, 0, 0) 3%, rgb(0, 0, 0) 97%, rgba(0, 0, 0, 0));
 }
 .scrollingSections .picsListDown .pics {
-  left: 1350px;
+  left: max(1350px, 100%);
   height: 90px;
   min-width: 150px;
   max-width: 150px;
@@ -199,7 +199,7 @@
   mask-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgb(0, 0, 0) 3%, rgb(0, 0, 0) 97%, rgba(0, 0, 0, 0));
 }
 .scrollingSections .picsListUp .pic {
-  right: 1350px;
+  right: max(1350px, 100%);
   height: 90px;
   min-width: 150px;
   max-width: 150px;
@@ -309,8 +309,11 @@
   width: 150px;
   padding-left: 5px;
   border: none;
-  border-radius: 5px;
-  box-shadow: black 0px 0px 1px 0.3px;
+  box-shadow: black 0px 0px 0px 0.3px;
+  border-radius: 7px;
+}
+.filterSection .filterMenu .filterByInputSection .containerLeft .input:focus {
+  outline: none;
 }
 .filterSection .filterMenu .filterByInputSection p {
   padding: 10px;
@@ -323,7 +326,7 @@
   padding-left: 5px;
   border: none;
   border-radius: 5px;
-  box-shadow: black 0px 0px 1px 0.3px;
+  box-shadow: black 0px 0px 0px 0.3px;
 }
 .filterSection .filterMenu .submitBtn {
   padding: 10px 20px;
@@ -334,7 +337,7 @@
   font-family: "Work Sans", sans-serif;
   font-weight: bold;
   cursor: pointer;
-  box-shadow: black 0px 0px 3px 0.3px;
+  box-shadow: black 0px 0px 6px 0.3px;
   background-color: aqua;
 }
 .filterSection .filterMenu .submitBtn:hover {
