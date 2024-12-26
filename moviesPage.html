@@ -114,7 +114,7 @@
             </ul>
          </section>
          <section class="filterSection">
-            <button class="filterBtnClosed">Filter Movies</button>
+            <button class="filterBtnClosed fa-solid fa-xmark fa-2xl"></button>
             <div class="filterMenu">
                <p>Filter by genres</p>
                <div class="tagsContainer">
@@ -129,21 +129,42 @@
                </div>
                <hr class="line">
                <p>Filter by released year</p>
-               <form class="inputContainerReleaseY">
-                  <input
-                     class="input releaseYfrom"
-                     type="number"
-                     min="1900"
-                     max="2025"
-                     placeholder="Release year from" />
-                  <p>To</p>
-                  <input
-                     class="input releaseYto"
-                     type="number"
-                     min="1900"
-                     max="2025"
-                     placeholder="Release year to" />
-               </form>
+               <section class="filterByInputSection">
+                  <form class="containerLeft">
+                     <input
+                        class="input releaseYfrom"
+                        type="number"
+                        min="1900"
+                        max="2025"
+                        placeholder="Release year from" />
+                     <p>To</p>
+                     <input
+                        class="input releaseYto"
+                        type="number"
+                        min="1900"
+                        max="2025"
+                        placeholder="Release year to" />
+                  </form>
+                  <form class="containerRight">
+                     <input
+                        class="input ratingFrom"
+                        type="number"
+                        step="0.1"
+                        min="1"
+                        max="10"
+                        placeholder="Rating from"/>
+                     <p>To</p>
+                     <input
+                        class="input ratingTo"
+                        type="number"
+                        step="0.1"
+                        min="1"
+                        max="10"
+                        placeholder="Rating to"/>
+                  </form>
+               </section>
+               <hr class="line">
+               <button class="submitBtn">Submit Filter</button>
             </div>
          </section>
          <section class="moviesSection"></section>

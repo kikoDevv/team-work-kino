@@ -246,18 +246,25 @@
   }
 }
 .filterSection {
-  font-family: "Work Sans", sans-serif;
+  margin-top: 100px;
+  position: relative;
 }
 .filterSection .filterBtnClosed {
-  padding: 10px 30px;
+  position: absolute;
+  padding: 20px 15px;
   font-size: larger;
-  border-radius: 10px;
+  border-radius: 50px;
   border: none;
   cursor: pointer;
-  box-shadow: 0px 0px 3px 0.03px;
+  background-color: rgb(255, 206, 206);
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 99999px;
 }
 .filterSection .filterBtnClosed:hover {
-  background-color: #23d5ab;
+  background-color: red;
+  color: white;
 }
 .filterSection .filterMenu {
   display: grid;
@@ -265,6 +272,7 @@
   padding: 50px;
   box-shadow: black 0px 0px 3px 0.8px;
   border-radius: 20px;
+  user-select: none;
 }
 .filterSection .filterMenu .line {
   margin-top: 30px;
@@ -287,8 +295,48 @@
   background-color: aqua;
   color: white;
 }
-.filterSection .filterMenu .inputContainerReleaseY {
+.filterSection .filterMenu .filterByInputSection {
   display: flex;
+  justify-content: space-between;
+}
+.filterSection .filterMenu .filterByInputSection .containerLeft {
+  display: flex;
+}
+.filterSection .filterMenu .filterByInputSection .containerLeft .input {
+  width: 150px;
+  padding-left: 5px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: black 0px 0px 1px 0.3px;
+}
+.filterSection .filterMenu .filterByInputSection p {
+  padding: 10px;
+}
+.filterSection .filterMenu .filterByInputSection .containerRight {
+  display: flex;
+}
+.filterSection .filterMenu .filterByInputSection .containerRight .input {
+  width: 150px;
+  padding-left: 5px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: black 0px 0px 1px 0.3px;
+}
+.filterSection .filterMenu .submitBtn {
+  padding: 10px 20px;
+  max-width: fit-content;
+  place-self: center;
+  border-radius: 9px;
+  border: none;
+  font-family: "Work Sans", sans-serif;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: black 0px 0px 3px 0.3px;
+  background-color: aqua;
+}
+.filterSection .filterMenu .submitBtn:hover {
+  background-color: #ffb509;
+  color: white;
 }
 
 @keyframes slide {
