@@ -4,17 +4,17 @@
       <meta charset="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <title>Document</title>
-      <link rel="stylesheet" href="main.css">
+      <link rel="stylesheet" href="main.css" />
       <script src="moviesPage.js"></script>
       <link
          rel="stylesheet"
          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
    </head>
-   <body>
+   <body id="body">
       <header class="header">
          <div class="logo-navbar">
             <div class="logo">
-               <img class="kino-logo" src="Pictures/kino-logo.png">
+               <img class="kino-logo" src="Pictures/kino-logo.png" />
             </div>
             <div class="nav-title-container">
                <h1>KINO</h1>
@@ -32,45 +32,119 @@
       <main class="main">
          <section class="upperSection">
             <div class="searchSection">
-               <input class="searchBar" type="search">
-               <button class="searchBtn">Search</button> 
+               <input class="searchBar" type="search" />
+               <button class="searchBtn">Search</button>
             </div>
-            <img class="seatImg" src="Pictures/seat.jpg">
-            <img class="kinoImg" src="Pictures/logo_header_computer.png">
+            <img class="seatImg" src="Pictures/seat.jpg" />
+            <img class="kinoImg" src="Pictures/logo_header_computer.png" />
          </section>
          <section class="avatarSection">
-            <img class="highlightsImgs" src="Pictures/avatarBackground.jpg">
-            <img class="avatarImg" src="Pictures/avatarpng.png">
+            <img class="highlightsImgs" src="Pictures/avatarBackground.jpg" />
+            <img class="avatarImg" src="Pictures/avatarpng.png" />
          </section>
          <section class="scrollingSections">
             <h1>Movie production companies we work with</h1>
             <ul class="picsListUp">
-               <img class="pic picx1" src="Pictures/universal.png" alt="Image not found">
-               <img class="pic picx2" src="Pictures/warner.png" alt="Image not found">
-               <img class="pic picx3" src="Pictures/paramount.png" alt="Image not found">
-               <img class="pic picx4" src="Pictures/prime.png" alt="Image not found">
-               <img class="pic picx5" src="Pictures/disney.png" alt="Image not found">
-               <img class="pic picx6" src="Pictures/dreamworks.png" alt="Image not found">
-               <img class="pic picx7" src="Pictures/pixar.png" alt="Image not found">
-               <img class="pic picx8" src="Pictures/hbo.png" alt="Image not found">
+               <img
+                  class="pic picx1"
+                  src="Pictures/universal.png"
+                  alt="Image not found" />
+               <img
+                  class="pic picx2"
+                  src="Pictures/warner.png"
+                  alt="Image not found" />
+               <img
+                  class="pic picx3"
+                  src="Pictures/paramount.png"
+                  alt="Image not found" />
+               <img
+                  class="pic picx4"
+                  src="Pictures/prime.png"
+                  alt="Image not found" />
+               <img
+                  class="pic picx5"
+                  src="Pictures/disney.png"
+                  alt="Image not found" />
+               <img
+                  class="pic picx6"
+                  src="Pictures/dreamworks.png"
+                  alt="Image not found" />
+               <img
+                  class="pic picx7"
+                  src="Pictures/pixar.png"
+                  alt="Image not found" />
+               <img
+                  class="pic picx8"
+                  src="Pictures/hbo.png"
+                  alt="Image not found" />
             </ul>
             <ul class="picsListDown">
-               <img class="pics pic1" src="Pictures/dreamworks.png" alt="Image not found">
-               <img class="pics pic2" src="Pictures/netflix.png" alt="Image not found">
-               <img class="pics pic3" src="Pictures/marvel.png" alt="Image not found">
-               <img class="pics pic4" src="Pictures/lucas.png" alt="Image not found">
-               <img class="pics pic5" src="Pictures/disney.png" alt="Image not found">
-               <img class="pics pic6" src="Pictures/newcinema.png" alt="Image not found">
-               <img class="pics pic7" src="Pictures/pixar.png" alt="Image not found">
-               <img class="pics pic8" src="Pictures/hbo.png" alt="Image not found">
+               <img
+                  class="pics pic1"
+                  src="Pictures/dreamworks.png"
+                  alt="Image not found" />
+               <img
+                  class="pics pic2"
+                  src="Pictures/netflix.png"
+                  alt="Image not found" />
+               <img
+                  class="pics pic3"
+                  src="Pictures/marvel.png"
+                  alt="Image not found" />
+               <img
+                  class="pics pic4"
+                  src="Pictures/lucas.png"
+                  alt="Image not found" />
+               <img
+                  class="pics pic5"
+                  src="Pictures/disney.png"
+                  alt="Image not found" />
+               <img
+                  class="pics pic6"
+                  src="Pictures/newcinema.png"
+                  alt="Image not found" />
+               <img
+                  class="pics pic7"
+                  src="Pictures/pixar.png"
+                  alt="Image not found" />
+               <img
+                  class="pics pic8"
+                  src="Pictures/hbo.png"
+                  alt="Image not found" />
             </ul>
-            
          </section>
          <section class="filterSection">
-            <!-- <button class="filterBtn">Filter Movies</button> -->
-            <form class="filterMenu">
-
-            </form>
+            <button class="filterBtnClosed">Filter Movies</button>
+            <div class="filterMenu">
+               <p>Filter by genres</p>
+               <div class="tagsContainer">
+                  <button class="tags drama">Drama</button>
+                  <button class="tags adventure">Adventure</button>
+                  <button class="tags crime">Crime</button>
+                  <button class="tags action">Action</button>
+                  <button class="tags Comedy">Comedy</button>
+                  <button class="tags sci">Sci-Fi</button>
+                  <button class="tags fantacy">Fantacy</button>
+                  <button class="tags kids">Kids</button>
+               </div>
+               <hr class="line">
+               <p>Filter by released year</p>
+               <form class="inputContainerReleaseY">
+                  <input
+                     class="input releaseYfrom"
+                     type="number"
+                     min="1900"
+                     max="2025"
+                     placeholder="Release year from" />
+                  <p>To</p>
+                  <input
+                     class="input releaseYto"
+                     type="number"
+                     min="1900"
+                     max="2025"
+                     placeholder="Release year to" />
+               </form>
+            </div>
          </section>
          <section class="moviesSection"></section>
       </main>
