@@ -149,6 +149,17 @@
   animation-timeline: view();
 }
 
+@keyframes slide {
+  0% {
+    left: 40%;
+  }
+  50% {
+    left: 20%;
+  }
+  100% {
+    left: 18%;
+  }
+}
 .scrollingSections {
   display: grid;
 }
@@ -364,17 +375,6 @@
   color: white;
 }
 
-@keyframes slide {
-  0% {
-    left: 40%;
-  }
-  50% {
-    left: 20%;
-  }
-  100% {
-    left: 18%;
-  }
-}
 @keyframes shrink {
   0% {
     min-width: 40vw;

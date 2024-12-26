@@ -159,7 +159,17 @@
       animation-timeline: view();
    }
 }
-
+@keyframes slide {
+   0% {
+      left: 40%;
+   }
+   50% {
+      left: 20%;
+   }
+   100% {
+      left: 18%;
+   }
+}
 //--------------------AvatarSection-ended------
 //--------------------rollingSections----------------
 .scrollingSections {
@@ -400,17 +410,7 @@
    }
 }
 
-@keyframes slide {
-   0% {
-      left: 40%;
-   }
-   50% {
-      left: 20%;
-   }
-   100% {
-      left: 18%;
-   }
-}
+
 
 @keyframes shrink {
    0% {
