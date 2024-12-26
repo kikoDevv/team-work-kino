@@ -133,28 +133,28 @@
   animation-timeline: view();
 }
 
-.rollingSections {
+.scrollingSections {
   display: grid;
 }
-.rollingSections h1 {
+.scrollingSections h1 {
   margin: 40px 0px;
   place-self: center;
   font-family: "Work Sans", sans-serif;
+  user-select: none;
 }
-.rollingSections .picsList {
+.scrollingSections .picsListDown {
   display: flex;
   list-style-type: none;
   width: 86%;
   height: 100px;
   padding: 10px 0px;
   margin-inline: auto;
-  outline: 3px solid royalblue;
   position: relative;
   overflow: hidden;
   mask-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgb(0, 0, 0) 3%, rgb(0, 0, 0) 97%, rgba(0, 0, 0, 0));
 }
-.rollingSections .picsList .pics {
-  left: 100%;
+.scrollingSections .picsListDown .pics {
+  left: 1350px;
   height: 90px;
   min-width: 150px;
   max-width: 150px;
@@ -164,34 +164,85 @@
   border-radius: 10px;
   box-shadow: #101827 0px 0px 4px 0.09px;
 }
-.rollingSections .picsList .pic1 {
+.scrollingSections .picsListDown .pic1 {
   animation-delay: -45s;
 }
-.rollingSections .picsList .pic2 {
+.scrollingSections .picsListDown .pic2 {
   animation-delay: -41.25s;
 }
-.rollingSections .picsList .pic3 {
+.scrollingSections .picsListDown .pic3 {
   animation-delay: -37.5s;
 }
-.rollingSections .picsList .pic4 {
+.scrollingSections .picsListDown .pic4 {
   animation-delay: -33.75s;
 }
-.rollingSections .picsList .pic5 {
+.scrollingSections .picsListDown .pic5 {
   animation-delay: -30s;
 }
-.rollingSections .picsList .pic6 {
+.scrollingSections .picsListDown .pic6 {
   animation-delay: -26.25s;
 }
-.rollingSections .picsList .pic7 {
+.scrollingSections .picsListDown .pic7 {
   animation-delay: -22.5s;
 }
-.rollingSections .picsList .pic8 {
+.scrollingSections .picsListDown .pic8 {
+  animation-delay: -18.75s;
+}
+.scrollingSections .picsListUp {
+  display: flex;
+  list-style-type: none;
+  width: 86%;
+  height: 100px;
+  padding: 10px 0px;
+  margin-inline: auto;
+  position: relative;
+  overflow: hidden;
+  mask-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgb(0, 0, 0) 3%, rgb(0, 0, 0) 97%, rgba(0, 0, 0, 0));
+}
+.scrollingSections .picsListUp .pic {
+  right: 1350px;
+  height: 90px;
+  min-width: 150px;
+  max-width: 150px;
+  position: absolute;
+  animation: scrollRight 30s linear infinite;
+  background-color: #ffb509;
+  border-radius: 10px;
+  box-shadow: #101827 0px 0px 4px 0.09px;
+}
+.scrollingSections .picsListUp .picx1 {
+  animation-delay: -45s;
+}
+.scrollingSections .picsListUp .picx2 {
+  animation-delay: -41.25s;
+}
+.scrollingSections .picsListUp .picx3 {
+  animation-delay: -37.5s;
+}
+.scrollingSections .picsListUp .picx4 {
+  animation-delay: -33.75s;
+}
+.scrollingSections .picsListUp .picx5 {
+  animation-delay: -30s;
+}
+.scrollingSections .picsListUp .picx6 {
+  animation-delay: -26.25s;
+}
+.scrollingSections .picsListUp .picx7 {
+  animation-delay: -22.5s;
+}
+.scrollingSections .picsListUp .picx8 {
   animation-delay: -18.75s;
 }
 
+@keyframes scrollRight {
+  to {
+    right: -150px;
+  }
+}
 @keyframes scroll {
   to {
-    left: -100px;
+    left: -150px;
   }
 }
 .filterSection {
