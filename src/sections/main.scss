@@ -97,3 +97,51 @@ header {
   right: 2rem;
   top: 2rem;
 }
+footer{
+    background-color: $backgroundColor;
+    font-size: 1.5rem;
+    height: 100%;
+    width: 100%;
+    nav{
+        display: grid;
+        padding-top: 5rem;
+        grid-template-columns: 17rem 17rem 17rem auto;
+        grid-template-rows: auto auto auto;
+    }
+    .footerNav{
+        text-decoration: none;
+        color: $textColor;
+        text-align: left;
+        padding:0.5rem 5rem 0.5rem 5rem;
+        width: 100%;
+    }
+    .footerAboutUsLink{
+        grid-column: 1;
+        grid-row: 1;
+    }
+    .footerAllMoviesLink{
+        grid-column: 1;
+        grid-row: 2;
+    }
+    .footerInstagramLink{
+        grid-column: 2;
+        grid-row: 1;
+    }
+    .footerFacebookLink{
+        grid-column: 2;
+        grid-row: 2;
+    }
+    .footerXLink{
+        grid-column: 2;
+        grid-row: 3;
+        padding-bottom: 3rem;
+    }
+    .footerTosLink{
+        grid-column: 3;
+        grid-row: 1;
+    }
+    .footerPrivacyPolicyLink{
+        grid-column: 3;
+        grid-row: 2;
+    }
+}
