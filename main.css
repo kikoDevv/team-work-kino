@@ -244,11 +244,15 @@
     left: -150px;
   }
 }
+.hidden {
+  display: none;
+}
+
 .filterSection {
   margin-top: 100px;
   position: relative;
 }
-.filterSection .filterBtnClosed {
+.filterSection .filterBtn {
   position: absolute;
   padding: 20px 15px;
   font-size: larger;
@@ -261,7 +265,7 @@
   transform: translateX(-50%);
   z-index: 99999px;
 }
-.filterSection .filterBtnClosed:hover {
+.filterSection .filterBtn:hover {
   background-color: red;
   color: white;
 }

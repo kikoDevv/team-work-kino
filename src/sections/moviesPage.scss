@@ -272,10 +272,13 @@
 }
 //--------------------rollingSections-ended------
 //-------------------filter menu-------------
+.hidden {
+   display: none;
+}
 .filterSection {
    margin-top: 100px;
    position: relative;
-   .filterBtnClosed {
+   .filterBtn {
       position: absolute;
       padding: 20px 15px;
       font-size: larger;
