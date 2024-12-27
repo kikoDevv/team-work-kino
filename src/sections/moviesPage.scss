@@ -428,11 +428,11 @@
          overflow: hidden;
          height: 100%;
          width: 100%;
-         &:hover{
+         &:hover {
             box-shadow: #ffb509 0px 0px 9px 4px;
             scale: 1.009;
          }
-         .moviesImg{
+         .moviesImg {
             // height: 50vh;
             width: 100%;
          }
@@ -474,30 +474,33 @@
 }
 //-----------movie cards enden-------------
 //-----------------------footer---------------
-.footer{
+.footer {
    padding: 0px 50px 100px 0px;
    display: flex;
    justify-content: space-evenly;
-   .containerLeft{
+   .containerLeft {
       display: grid;
       color: white;
-      h1, p{
+      h1,
+      p {
          font-family: "Work Sans", sans-serif;
          padding: 10px 0px;
       }
    }
-   .containerMid{
+   .containerMid {
       display: grid;
       color: white;
-      h1, p{
+      h1,
+      p {
          font-family: "Work Sans", sans-serif;
          padding: 10px 0px;
       }
    }
-   .containerRight{
+   .containerRight {
       display: grid;
       color: white;
-      h1, p{
+      h1,
+      p {
          font-family: "Work Sans", sans-serif;
          padding: 10px 0px;
       }
