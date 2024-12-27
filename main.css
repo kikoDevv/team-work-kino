@@ -119,7 +119,7 @@
   animation-timeline: view();
 }
 .upperSection .searchSection .searchBtn:hover {
-  background-color: aquamarine;
+  background-color: #ffb509;
   color: white;
 }
 
@@ -368,11 +368,102 @@
   font-weight: bold;
   cursor: pointer;
   box-shadow: black 0px 0px 6px 0.3px;
-  background-color: aqua;
+  background-color: #2d7dfe;
 }
 .filterSection .filterMenu .submitBtn:hover {
   background-color: #ffb509;
   color: white;
+}
+
+.moviesLine {
+  margin: 100px 0px;
+}
+
+.moviesSection {
+  padding: 0px 20px 0px 20px;
+}
+.moviesSection .cardContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 15px;
+  justify-items: center;
+}
+.moviesSection .cardContainer .movieCard {
+  display: grid;
+  background-color: #101827;
+  border-radius: 10px;
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+}
+.moviesSection .cardContainer .movieCard:hover {
+  box-shadow: #ffb509 0px 0px 9px 4px;
+  scale: 1.009;
+}
+.moviesSection .cardContainer .movieCard .moviesImg {
+  width: 100%;
+}
+.moviesSection .cardContainer .movieCard .cardInfo {
+  display: grid;
+  padding: 10px;
+  font-family: sans-serif;
+}
+.moviesSection .cardContainer .movieCard .cardInfo .moviesName {
+  color: white;
+  font-family: "Work Sans", sans-serif;
+  place-self: center;
+}
+.moviesSection .cardContainer .movieCard .cardInfo .moviesDes {
+  color: white;
+  font-family: "Work Sans", sans-serif;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.moviesSection .cardContainer .movieCard .cardInfo .buyBtn {
+  margin-top: 20px;
+  max-width: fit-content;
+  place-self: center;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  font-family: "Work Sans", sans-serif;
+  font-weight: bold;
+  cursor: pointer;
+  background-color: #2d7dfe;
+}
+.moviesSection .cardContainer .movieCard .cardInfo .buyBtn:hover {
+  background-color: #ffb509;
+  color: white;
+}
+
+.footer {
+  padding: 0px 50px 100px 0px;
+  display: flex;
+  justify-content: space-evenly;
+}
+.footer .containerLeft {
+  display: grid;
+  color: white;
+}
+.footer .containerLeft h1, .footer .containerLeft p {
+  font-family: "Work Sans", sans-serif;
+  padding: 10px 0px;
+}
+.footer .containerMid {
+  display: grid;
+  color: white;
+}
+.footer .containerMid h1, .footer .containerMid p {
+  font-family: "Work Sans", sans-serif;
+  padding: 10px 0px;
+}
+.footer .containerRight {
+  display: grid;
+  color: white;
+}
+.footer .containerRight h1, .footer .containerRight p {
+  font-family: "Work Sans", sans-serif;
+  padding: 10px 0px;
 }
 
 @keyframes shrink {
@@ -394,9 +485,8 @@
     background-position: 0 50%;
   }
 }
-body {
-  margin-bottom: 800px;
-  background-color: rgba(45, 45, 45, 0.7921568627);
+#moviesPageBody {
+  background-color: #0e0e1b;
 }
 
 header {

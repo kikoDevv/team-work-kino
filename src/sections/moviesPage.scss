@@ -108,8 +108,8 @@
          min-width: 100%;
          animation: roundBorderSearchBar both;
          animation-timeline: view();
-         
-         &:focus{
+
+         &:focus {
             outline: none;
          }
       }
@@ -126,19 +126,19 @@
          animation-timeline: view();
 
          &:hover {
-            background-color: aquamarine;
+            background-color: #ffb509;
             color: white;
          }
       }
    }
 }
-@keyframes roundBorderSearchBar{
+@keyframes roundBorderSearchBar {
    100% {
       border-radius: 30px 0px 0px 30px;
    }
 }
-@keyframes roundBorderBtn{
-   100%{
+@keyframes roundBorderBtn {
+   100% {
       border-radius: 0px 30px 30px 0px;
    }
 }
@@ -338,7 +338,7 @@
       box-shadow: black 0px 0px 3px 0.8px;
       border-radius: 20px;
       user-select: none;
-      background-color:aliceblue;
+      background-color: aliceblue;
       // background-color:white;
       .line {
          margin-top: 30px;
@@ -372,7 +372,7 @@
                border: none;
                box-shadow: black 0px 0px 0px 0.3px;
                border-radius: 7px;
-               &:focus{
+               &:focus {
                   outline: none;
                }
             }
@@ -401,7 +401,7 @@
          font-weight: bold;
          cursor: pointer;
          box-shadow: black 0px 0px 6px 0.3px;
-         background-color: aqua;
+         background-color: #2d7dfe;
          &:hover {
             background-color: #ffb509;
             color: white;
@@ -409,9 +409,101 @@
       }
    }
 }
-
-
-
+//--------------filter menu neded---------------
+//--------------------movie cards---------------------
+.moviesLine {
+   margin: 100px 0px;
+}
+.moviesSection {
+   padding: 0px 20px 0px 20px;
+   .cardContainer {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 15px;
+      justify-items: center;
+      .movieCard {
+         display: grid;
+         background-color: #101827;
+         border-radius: 10px;
+         overflow: hidden;
+         height: 100%;
+         width: 100%;
+         &:hover{
+            box-shadow: #ffb509 0px 0px 9px 4px;
+            scale: 1.009;
+         }
+         .moviesImg{
+            // height: 50vh;
+            width: 100%;
+         }
+         .cardInfo {
+            display: grid;
+            padding: 10px;
+            font-family: sans-serif;
+            .moviesName {
+               color: white;
+               font-family: "Work Sans", sans-serif;
+               place-self: center;
+            }
+            .moviesDes {
+               color: white;
+               font-family: "Work Sans", sans-serif;
+               // max-width: 80%;
+               overflow: hidden;
+               text-overflow: ellipsis;
+            }
+            .buyBtn {
+               margin-top: 20px;
+               max-width: fit-content;
+               place-self: center;
+               padding: 10px 20px;
+               border: none;
+               border-radius: 10px;
+               font-family: "Work Sans", sans-serif;
+               font-weight: bold;
+               cursor: pointer;
+               background-color: #2d7dfe;
+               &:hover {
+                  background-color: #ffb509;
+                  color: white;
+               }
+            }
+         }
+      }
+   }
+}
+//-----------movie cards enden-------------
+//-----------------------footer---------------
+.footer{
+   padding: 0px 50px 100px 0px;
+   display: flex;
+   justify-content: space-evenly;
+   .containerLeft{
+      display: grid;
+      color: white;
+      h1, p{
+         font-family: "Work Sans", sans-serif;
+         padding: 10px 0px;
+      }
+   }
+   .containerMid{
+      display: grid;
+      color: white;
+      h1, p{
+         font-family: "Work Sans", sans-serif;
+         padding: 10px 0px;
+      }
+   }
+   .containerRight{
+      display: grid;
+      color: white;
+      h1, p{
+         font-family: "Work Sans", sans-serif;
+         padding: 10px 0px;
+      }
+   }
+}
+//---------------footer ended--------
 @keyframes shrink {
    0% {
       min-width: 40vw;
@@ -433,7 +525,9 @@
    }
 }
 
-body {
-   margin-bottom: 800px;
-   background-color: #2d2d2dca;
+#moviesPageBody {
+   // margin-bottom: 800px;
+   // background-color: #2d2d2dca;
+   background-color: #0e0e1b;
+   // font-family: "Work Sans", sans-serif;
 }
