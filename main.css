@@ -445,7 +445,8 @@
   display: grid;
   color: white;
 }
-.footer .containerLeft h1, .footer .containerLeft p {
+.footer .containerLeft h1,
+.footer .containerLeft p {
   font-family: "Work Sans", sans-serif;
   padding: 10px 0px;
 }
@@ -453,7 +454,8 @@
   display: grid;
   color: white;
 }
-.footer .containerMid h1, .footer .containerMid p {
+.footer .containerMid h1,
+.footer .containerMid p {
   font-family: "Work Sans", sans-serif;
   padding: 10px 0px;
 }
@@ -461,7 +463,8 @@
   display: grid;
   color: white;
 }
-.footer .containerRight h1, .footer .containerRight p {
+.footer .containerRight h1,
+.footer .containerRight p {
   font-family: "Work Sans", sans-serif;
   padding: 10px 0px;
 }
