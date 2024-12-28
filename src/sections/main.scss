@@ -68,12 +68,13 @@ header {
 }
 
 .skiReviewerSection {
-   background-color: $backgroundColor;
-   width: 100vw;
-   display: flex;
-   padding-top: 30px;
-   gap: 1rem;
-   justify-content: center;
+  background-color: $backgroundColor;
+  color: #FFFFFF;
+  width: 100vw;
+  display: flex;
+  padding-top: 30px;
+  gap: 1rem;
+  justify-content: center;
 }
 
 .skiReviewer {
@@ -82,11 +83,20 @@ header {
 }
 
 .movieModalWrapper {
-   position: fixed;
-   background-color: $backgroundColor;
-   top: 0px;
-   width: 100%;
-   height: 100%;
+    position: fixed;
+    background-color: $backgroundColor;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+}
+
+.exitBtn {
+  color: white;
+  font-size: 50px;
+  display: inline;
+  position: absolute;
+  right: 2rem;
+  top: 2rem;
 }
 footer {
    background-color: $backgroundColor;
