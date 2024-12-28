@@ -618,4 +618,50 @@ footer .footerPrivacyPolicyLink {
   grid-row: 2;
 }
 
+.hoverEffect:hover {
+  color: white;
+  background-color: #175dcc;
+}
+
+.upComingEvent {
+  padding: 0px 40px;
+}
+.upComingEvent .lineEvent {
+  margin-top: 100px;
+}
+.upComingEvent h2 {
+  color: black;
+  font-family: sans-serif;
+  margin-left: 50px;
+}
+.upComingEvent .evenemangContainer {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 100px;
+}
+.upComingEvent .eventCard {
+  background-color: #0e0e1b;
+  display: grid;
+  overflow: hidden;
+  border-radius: 10px;
+}
+.upComingEvent .eventCard p {
+  color: white;
+  margin-left: 10px;
+}
+.upComingEvent .eventCard .eventBtn {
+  max-width: fit-content;
+  place-self: end;
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: none;
+  background-color: white;
+  color: black;
+  margin: 10px 10px 10px 0px;
+}
+.upComingEvent .eventCard .eventBtn:hover {
+  color: white;
+  background-color: #175dcc;
+}
+
 /*# sourceMappingURL=main.css.map */

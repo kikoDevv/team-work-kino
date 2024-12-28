@@ -30,6 +30,7 @@ const movieCard = {
         // create button for movie cards
         const movieBtn = document.createElement('button');
         movieBtn.classList.add('movieBtn');
+        movieBtn.classList.add('hoverEffect');
 
         // create span to append into movieBtn
         const movieSpan = document.createElement('span');
