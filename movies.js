@@ -10,7 +10,7 @@ const movieCard = {
      * @param {*} movieId Will be used to append full information about the movie later.
      * @param {*} url The url that should be added to image element. (should be read from json).
      * @param {*} title The title to the card. Should be read from json.
-     * @param {*} addMovieCardTo Wich element the moviecard should be appended to.
+     * @param {*} addMovieCardTo Which element the moviecard should be appended to.
      */
     createMovieCard (movieId, url, title, addMovieCardTo) {
 
@@ -19,7 +19,7 @@ const movieCard = {
         movieWrapper.id = movieId;
         movieWrapper.classList.add('movieWrapper');
 
-        //MovieImage
+        // MovieImage
         const movieImage = document.createElement('img');
         movieImage.classList.add('movieImage');
         movieImage.alt = "a movie";
@@ -43,19 +43,19 @@ const movieCard = {
         const movieIcon = document.createElement('i');
         movieIcon.classList.add('fa-solid', 'fa-money-bill-wave');
 
-        // append to index.hmtl
-        //append elements to movieBtn
+        // append to movieBtn
         movieBtn.append(movieSpan);
         movieBtn.append(movieIcon);
 
-        //append to movieWrapper
+        // append to movieWrapper
         movieWrapper.append(movieImage);
         movieWrapper.append(movieTitle);
         movieWrapper.append(movieBtn);
 
-        //append movieWrapper to body
+        // append movieWrapper to body
         addMovieCardTo.append(movieWrapper);
     },
+
     /**
      * Function to load create movie cards from the data in an array
      * @param {*} array Information to load data from.
@@ -65,6 +65,7 @@ const movieCard = {
             this.createMovieCard(element.id, element.image, element.title, appendMovieCardTo);
         });
     },
+
     /**
      * Function to create clickevent to open movieModal
      * @param {*} movieArray Array to find all the information that matches the id from. 
@@ -82,14 +83,37 @@ const movieCard = {
             });
         });
     },
+
     /**
      * Function to create a movie modal.
      */
-    createMovieModal () {
+    createMovieModal() {
+        // Create movie modal container
         const movieModal = document.createElement('section');
         movieModal.classList.add('movieModalWrapper');
 
-        document.querySelector('body').append(movieModal);
+        // Create exit button inside the modal
+        const exitBtn = document.createElement('div');
+        exitBtn.classList.add('exitBtn');
+        exitBtn.innerHTML = 'X'; // You can use an icon here (e.g., <i class="fa-solid fa-xmark"></i>)
+
+        // Append exit button to modal
+        movieModal.append(exitBtn);
+
+        // Append the modal to body
+        document.body.append(movieModal);
+
+        // Add event listener to exit button
+        exitBtn.addEventListener('click', () => {
+            this.exitMovieModal(movieModal); // Pass the modal to the exit function
+        });
+    },
+    /**
+    * Function to exit the movie modal by removing it from the DOM.
+    */
+    exitMovieModal (movieModal) {
+        // Remove the movie modal from the DOM
+        movieModal.remove();
     },
     /**
      * Function that dynamically append information to movie modal
@@ -317,7 +341,6 @@ const movieCard = {
 
         return `${hours} timme ${min} minuter`;
     }
-
 };
 
 
