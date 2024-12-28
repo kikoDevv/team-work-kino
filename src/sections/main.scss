@@ -1,3 +1,4 @@
+@use "moviesPage.scss" as *;
 $backgroundColor: #0e0e1b;
 $buttonColor: #175dcc;
 $textColor: #ffffff;
@@ -10,6 +11,8 @@ $textColor: #ffffff;
   font-family: "Roboto", serif;
   color: $textColor;
 }
+
+
 
 header {
   background-color: $backgroundColor;
@@ -31,7 +34,6 @@ header {
     width: 95%; 
     gap: 1rem; 
   }
-
   .headerNav {
     display: flex; 
     flex-wrap: wrap; 
