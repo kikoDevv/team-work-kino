@@ -1,9 +1,9 @@
-/* Error: Can't find stylesheet to import.
- *   ,
- * 1 | @use "moviesPage.scss" as *;
- *   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^
- *   '
- *   src/sections/main.scss 1:1  root stylesheet */
+/* Error: expected "{".
+ *     ,
+ * 107 |     overflow-y: auto;
+ *     |                     ^
+ *     '
+ *   src/sections/main.scss 107:21  root stylesheet */
 
 body::before {
   font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
@@ -13,5 +13,5 @@ body::before {
   padding: 1em;
   margin-bottom: 1em;
   border-bottom: 2px solid black;
-  content: "Error: Can't find stylesheet to import.\a   \2577 \a 1 \2502  @use \"moviesPage.scss\" as *;\a   \2502  ^^^^^^^^^^^^^^^^^^^^^^^^^^^\a   \2575 \a   src/sections/main.scss 1:1  root stylesheet";
+  content: 'Error: expected "{".\a     \2577 \a 107 \2502      overflow-y: auto;\a     \2502                      ^\a     \2575 \a   src/sections/main.scss 107:21  root stylesheet';
 }

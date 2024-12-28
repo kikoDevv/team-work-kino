@@ -71,6 +71,15 @@ header {
   }
 }
 
+<<<<<<< HEAD
+=======
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: "Roboto", serif;
+}
+
+>>>>>>> e325759813f03f67f9b5f506864deac3314c4f06
 .skiReviewerSection {
   background-color: $backgroundColor;
   width: 100vw;
@@ -91,7 +100,10 @@ header {
     top: 0px;
     width: 100%;
     height: 100%;
+<<<<<<< HEAD
 
+=======
+>>>>>>> e325759813f03f67f9b5f506864deac3314c4f06
     overflow-y: auto;
 }
 
@@ -204,6 +216,7 @@ header {
     }
   }
 }
+<<<<<<< HEAD
 .exitBtn {
   color: white;
   font-size: 50px;
@@ -211,6 +224,9 @@ header {
   position: absolute;
   right: 2rem;
   top: 2rem;
+=======
+
+>>>>>>> e325759813f03f67f9b5f506864deac3314c4f06
 
 }
 //-------------Top 3-----------------
@@ -248,5 +264,9 @@ header {
       border-radius: 0px 0px 20px 0px;
     }
   }
+<<<<<<< HEAD
+=======
+
+>>>>>>> e325759813f03f67f9b5f506864deac3314c4f06
 }
 
