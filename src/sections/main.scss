@@ -93,7 +93,7 @@ header {
 /* moviecontent layout */
 .movieContent {
   display: grid;
-  grid-template-rows: 10% 30% % 60%;
+  grid-template-rows: 40% % 60%;
 
   margin-left: auto;
   margin-right: auto;
@@ -104,21 +104,17 @@ header {
   color: $textColor;
 }
 
-/* where the exit form movie modal should be */
-.exitContainer {
-  height: 40px;
-  width: 100%;
-}
-
 .mediaWrapper {
   grid-row-start: 2;
   display: flex;
   width: 100%;
+  height: 100%;
 
   margin-bottom: 5rem;
 
   .movieTrailer {
     width: 60%;
+    flex-shrink: 0;
     height: 100%;
   }
 

@@ -313,12 +313,7 @@ const movieCard = {
         infoContainer.append(leftInfo);
         infoContainer.append(rightInfo);
 
-        //create for exit div
-        const exitDiv = document.createElement('div');
-        exitDiv.classList.add('exitContainer');
-
         // append to movieContent
-        movieContent.append(exitDiv);
         movieContent.append(mediaWrapper);
         movieContent.append(infoContainer);
 

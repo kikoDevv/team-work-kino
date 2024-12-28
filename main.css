@@ -82,7 +82,7 @@ header .searchBar .searchBtn {
 /* moviecontent layout */
 .movieContent {
   display: grid;
-  grid-template-rows: 10% 30%;
+  grid-template-rows: 40%;
   margin-left: auto;
   margin-right: auto;
   width: 80%;
@@ -90,20 +90,16 @@ header .searchBar .searchBtn {
   color: #ffffff;
 }
 
-/* where the exit form movie modal should be */
-.exitContainer {
-  height: 40px;
-  width: 100%;
-}
-
 .mediaWrapper {
-  grid-row-start: 1;
+  grid-row-start: 2;
   display: flex;
   width: 100%;
+  height: 100%;
   margin-bottom: 5rem;
 }
 .mediaWrapper .movieTrailer {
   width: 60%;
+  flex-shrink: 0;
   height: 100%;
 }
 .mediaWrapper .movieImg {
@@ -114,7 +110,7 @@ header .searchBar .searchBtn {
 }
 
 .movieInfoBox {
-  grid-row-start: 2;
+  grid-row-start: 3;
   display: flex;
   gap: 2rem;
   height: 520px;
@@ -142,14 +138,12 @@ footer {
   height: 100%;
   width: 100%;
 }
-
 footer nav {
   display: grid;
   padding-top: 5rem;
   grid-template-columns: 17rem 17rem 17rem auto;
   grid-template-rows: auto auto auto;
 }
-
 footer .footerNav {
   text-decoration: none;
   color: #ffffff;
@@ -157,38 +151,31 @@ footer .footerNav {
   padding: 0.5rem 5rem 0.5rem 5rem;
   width: 100%;
 }
-
 footer .footerAboutUsLink {
   grid-column: 1;
   grid-row: 1;
 }
-
 footer .footerAllMoviesLink {
   grid-column: 1;
   grid-row: 2;
 }
-
 footer .footerInstagramLink {
   grid-column: 2;
   grid-row: 1;
 }
-
 footer .footerFacebookLink {
   grid-column: 2;
   grid-row: 2;
 }
-
 footer .footerXLink {
   grid-column: 2;
   grid-row: 3;
   padding-bottom: 3rem;
 }
-
 footer .footerTosLink {
   grid-column: 3;
   grid-row: 1;
 }
-
 footer .footerPrivacyPolicyLink {
   grid-column: 3;
   grid-row: 2;
