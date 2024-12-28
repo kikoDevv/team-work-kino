@@ -585,14 +585,12 @@ footer {
   height: 100%;
   width: 100%;
 }
-
 footer nav {
   display: grid;
   padding-top: 5rem;
   grid-template-columns: 17rem 17rem 17rem auto;
   grid-template-rows: auto auto auto;
 }
-
 footer .footerNav {
   text-decoration: none;
   color: #ffffff;
@@ -600,38 +598,31 @@ footer .footerNav {
   padding: 0.5rem 5rem 0.5rem 5rem;
   width: 100%;
 }
-
 footer .footerAboutUsLink {
   grid-column: 1;
   grid-row: 1;
 }
-
 footer .footerAllMoviesLink {
   grid-column: 1;
   grid-row: 2;
 }
-
 footer .footerInstagramLink {
   grid-column: 2;
   grid-row: 1;
 }
-
 footer .footerFacebookLink {
   grid-column: 2;
   grid-row: 2;
 }
-
 footer .footerXLink {
   grid-column: 2;
   grid-row: 3;
   padding-bottom: 3rem;
 }
-
 footer .footerTosLink {
   grid-column: 3;
   grid-row: 1;
 }
-
 footer .footerPrivacyPolicyLink {
   grid-column: 3;
   grid-row: 2;
