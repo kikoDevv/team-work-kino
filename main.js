@@ -42,6 +42,6 @@ console.log(released);
 console.log(upcoming);
 
 document.getElementsByClassName("allMoviesBtn").addEventListener("click", function() {
-    window.location.href = "allMovies.html"; 
+    window.location.href = "moviesPage.html"; 
   });
   
