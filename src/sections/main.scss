@@ -94,7 +94,7 @@ header {
    background-color: $backgroundColor;
    top: 0px;
    width: 100%;
-   height:100%;
+   height: 100%;
    overflow: auto;
 }
 
@@ -220,26 +220,81 @@ header {
 }
 .topThree {
    display: grid;
-   grid-template-columns: 1fr 43vh;
+   // grid-template-columns: 1.5fr 1fr;
+   grid-template-columns: minmax(0, 1.8fr) minmax(0, 1fr);
    gap: 5px;
    margin: 5%;
-   .imgLeft {
-      max-width: 100%;
-      min-height: 100%;
-      border-radius: 20px 0px 0px 20px;
-   }
-   .imgsRight {
-      .imgTop {
-         max-width: 100%;
-         max-height: 100%;
-         min-width: 100%;
-         border-radius: 0px 20px 0px 0px;
+   overflow: hidden;
+   border-radius: 10px;
+   user-select: none;
+   box-shadow: black 0px 0px 9px 0.01px;
+   button {
+      padding: 10px 20px;
+      border: none;
+      font-family: sans-serif;
+      border-radius: 7px;
+      cursor: pointer;
+      max-height: fit-content;
+      background-color: blue;
+      color: white;
+      &:hover {
+         background-color: white;
+         color: black;
       }
-      .imgBottom {
-         max-width: 100%;
-         max-height: 100%;
-         min-width: 100%;
-         border-radius: 0px 0px 20px 0px;
+   }
+   .containerLeft {
+      background-color: #0e0e1b;
+      .imgLeft {
+         &:hover {
+            opacity: 0.8;
+         }
+         // outline: 5px solid red;
+         width: 100%;
+         height: 89%;
+         // object-fit: cover;
+         // min-height: 100%;
+         // max-height: 100%;
+      }
+      .infoCard {
+         display: flex;
+         justify-content: space-between;
+         padding: 5px 10px;
+      }
+   }
+   .containerRight {
+      display: grid;
+      grid-template-rows: 1fr 1fr;
+      gap: 5px;
+
+      .movieCardTop {
+         background-color: #0e0e1b;
+         .imgTop {
+            &:hover {
+               opacity: 0.8;
+            }
+            max-width: 100%;
+            max-height: 100%;
+         }
+         .infoCard {
+            display: flex;
+            justify-content: space-between;
+            padding: 5px 10px;
+         }
+      }
+      .movieCardBottom {
+         background-color: #0e0e1b;
+         .imgBottom {
+            &:hover {
+               opacity: 0.8;
+            }
+            max-width: 100%;
+            max-height: 100%;
+         }
+         .infoCard {
+            display: flex;
+            justify-content: space-between;
+            padding: 5px 10px;
+         }
       }
    }
 }
@@ -336,4 +391,3 @@ footer {
       grid-row: 2;
    }
 }
-

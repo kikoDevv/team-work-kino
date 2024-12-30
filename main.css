@@ -993,26 +993,77 @@ header .searchBar .searchBtn {
 
 .topThree {
   display: grid;
-  grid-template-columns: 1fr 43vh;
+  grid-template-columns: minmax(0, 1.8fr) minmax(0, 1fr);
   gap: 5px;
   margin: 5%;
+  overflow: hidden;
+  border-radius: 10px;
+  user-select: none;
+  box-shadow: black 0px 0px 9px 0.01px;
 }
-.topThree .imgLeft {
-  max-width: 100%;
-  min-height: 100%;
-  border-radius: 20px 0px 0px 20px;
+.topThree button {
+  padding: 10px 20px;
+  border: none;
+  font-family: sans-serif;
+  border-radius: 7px;
+  cursor: pointer;
+  max-height: fit-content;
+  background-color: blue;
+  color: white;
 }
-.topThree .imgsRight .imgTop {
+.topThree button:hover {
+  background-color: white;
+  color: black;
+}
+.topThree .containerLeft {
+  background-color: #0e0e1b;
+}
+.topThree .containerLeft .imgLeft {
+  width: 100%;
+  height: 89%;
+}
+.topThree .containerLeft .imgLeft:hover {
+  opacity: 0.8;
+}
+.topThree .containerLeft .infoCard {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 10px;
+}
+.topThree .containerRight {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  gap: 5px;
+}
+.topThree .containerRight .movieCardTop {
+  background-color: #0e0e1b;
+}
+.topThree .containerRight .movieCardTop .imgTop {
   max-width: 100%;
   max-height: 100%;
-  min-width: 100%;
-  border-radius: 0px 20px 0px 0px;
 }
-.topThree .imgsRight .imgBottom {
+.topThree .containerRight .movieCardTop .imgTop:hover {
+  opacity: 0.8;
+}
+.topThree .containerRight .movieCardTop .infoCard {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 10px;
+}
+.topThree .containerRight .movieCardBottom {
+  background-color: #0e0e1b;
+}
+.topThree .containerRight .movieCardBottom .imgBottom {
   max-width: 100%;
   max-height: 100%;
-  min-width: 100%;
-  border-radius: 0px 0px 20px 0px;
+}
+.topThree .containerRight .movieCardBottom .imgBottom:hover {
+  opacity: 0.8;
+}
+.topThree .containerRight .movieCardBottom .infoCard {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 10px;
 }
 
 .upComingEvents {
