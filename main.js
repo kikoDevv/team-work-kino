@@ -23,25 +23,43 @@ const array = [
     "language": "English, Spanish"
   },
   {
-    id: 2,
-    image: "https://placecats.com/640/480",
-    comingSoon: false,
-    title: "Avatar",
-    trailer: "https://www.youtube.com/embed/dtKMEAXyPkg"
+    trailer: "https://www.youtube.com/embed/dtKMEAXyPkg",
+    "id": 2,
+    "comingSoon": false,
+    "title": "Avatar",
+    "releaseYear": 2009,
+    "description": "A paraplegic marine dispatched to the moon Pandora on a unique mission becomes torn between following his orders and protecting the world he feels is his home.",
+    "image": "https://placecats.com/640/480",
+    "rating":3,
+    "genre": "Action, Adventure, Fantasy",
+    "runtime": "162 min",
+    "rated": "PG-13",
+    "director": "James Cameron",
+    "actors": "Sam Worthington, Zoe Saldana, Sigourney Weaver, Stephen Lang",
+    "language": "English, Spanish"
   },
   {
-    id: 3,
-    image: "https://placecats.com/640/480",
-    comingSoon: false,
-    title: "Avatar",
-    trailer: "https://www.youtube.com/embed/5PSNL1qE6VY"
+    trailer: "https://www.youtube.com/embed/dtKMEAXyPkg",
+    "id": 3,
+    "comingSoon": false,
+    "title": "Avatar",
+    "releaseYear": 2009,
+    "description": "A paraplegic marine dispatched to the moon Pandora on a unique mission becomes torn between following his orders and protecting the world he feels is his home.",
+    "image": "https://placecats.com/640/480",
+    "rating": 6,
+    "genre": "Action, Adventure, Fantasy",
+    "runtime": "162 min",
+    "rated": "PG-13",
+    "director": "James Cameron",
+    "actors": "Sam Worthington, Zoe Saldana, Sigourney Weaver, Stephen Lang",
+    "language": "English, Spanish"
   }
 ];
 
 // create cards from all the elements in an array.
-movieCard.createMovieCardsFromArray(array, figureCard);
+//movieCard.createMovieCardsFromArray(array, figureCard);
 // opens movie modal box from movie card.
-movieCard.clickEventMovieModal(array);
+//movieCard.clickEventMovieModal(array);
 
 // reads json file to diffrent arrays in movie objects.
 movies.getAllMovies();
@@ -51,22 +69,25 @@ movies.getUpcomingMovies();
 // makes the arrays from the object global
 let allMovies = movies.allMovies;
 console.log(allMovies);
+console.log(allMovies.length);
 let released = movies.released;
 let upcoming = movies.upcoming;
 console.log(released);
+console.log("released length: "+released.length);
 console.log(upcoming);
-
 findTopThreeMovies();
 
 function findTopThreeMovies(){
     console.log("in top three movies");
-    released.sort((a,b) => b.rating - a.rating);
+    releasedArray.sort((a,b) => b.rating - a.rating);
+    array.sort((a,b) => b.rating - a.rating);
     let topThreeMovies = [];
     for(let i=0; i<3;i++){
         topThreeMovies.push(released[i]);
         console.log(topThreeMovies.length);
     }
-    console.log(topThreeMovies[0]+" "+topThreeMovies[1]+" "+topThreeMovies[2]);
-    const container = document.querySelector(".topThree");
-    createMovieCardsFromArray(topThreeMovies, container);
+    console.log(topThreeMovies[0].rating+" "+topThreeMovies[1].rating+" "+topThreeMovies[2].rating);
+    const container = document.querySelector(".topThreeCards");   
+    movieCard.createMovieCardsFromArray(topThreeMovies, container);
+    movieCard.clickEventMovieModal(topThreeMovies);
 }
