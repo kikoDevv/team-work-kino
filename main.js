@@ -61,10 +61,12 @@ findTopThreeMovies();
 function findTopThreeMovies(){
     console.log("in top three movies");
     released.sort((a,b) => b.rating - a.rating);
+    let topThreeMovies = [];
     for(let i=0; i<3;i++){
         topThreeMovies.push(released[i]);
         console.log(topThreeMovies.length);
     }
     console.log(topThreeMovies[0]+" "+topThreeMovies[1]+" "+topThreeMovies[2]);
-    
+    const container = document.querySelector(".topThree");
+    createMovieCardsFromArray(topThreeMovies, container);
 }
