@@ -355,6 +355,7 @@
             border: none;
             cursor: pointer;
             box-shadow: 0px 0px 2px 0.008px;
+            background-color:#101827;
             &:hover {
                background-color: aqua;
                color: white;
@@ -485,6 +486,7 @@
       p {
          font-family: "Work Sans", sans-serif;
          padding: 10px 0px;
+         font-size: large;
       }
    }
    .containerMid {
@@ -494,6 +496,7 @@
       p {
          font-family: "Work Sans", sans-serif;
          padding: 10px 0px;
+         font-size: large;
       }
    }
    .containerRight {
@@ -503,6 +506,7 @@
       p {
          font-family: "Work Sans", sans-serif;
          padding: 10px 0px;
+         font-size: large;
       }
    }
 }
