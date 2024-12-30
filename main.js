@@ -3,7 +3,6 @@ import { movies } from "./getMovies.js";
 
 // to decide where movieCards should be appended
 const figureCard = document.querySelector("figure.movies");
-
 //example array how to load data (will be changed to data from json-file)
 const array = [
   {
@@ -55,3 +54,16 @@ let released = movies.released;
 let upcoming = movies.upcoming;
 console.log(released);
 console.log(upcoming);
+
+findTopThreeMovies();
+
+function findTopThreeMovies(){
+    console.log("in top three movies");
+    released.sort((a,b) => b.rating - a.rating);
+    for(let i=0; i<3;i++){
+        topThreeMovies.push(released[i]);
+        console.log(topThreeMovies.length);
+    }
+    console.log(topThreeMovies[0]+" "+topThreeMovies[1]+" "+topThreeMovies[2]);
+    
+}
