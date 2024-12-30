@@ -69,25 +69,34 @@ movies.getUpcomingMovies();
 // makes the arrays from the object global
 let allMovies = movies.allMovies;
 console.log(allMovies);
-console.log(allMovies.length);
 let released = movies.released;
 let upcoming = movies.upcoming;
 console.log(released);
-console.log("released length: "+released.length);
 console.log(upcoming);
 findTopThreeMovies();
 
-function findTopThreeMovies(){
-    console.log("in top three movies");
+
+async function findTopThreeMovies(){
+    const releasedArray = [];
+    const response = await fetch("content/movies.json");
+    const data = await response.json();
+    data.forEach((element) => {
+        if(!element.comingSoon){
+            releasedArray.push(element);
+        }
+    })
     releasedArray.sort((a,b) => b.rating - a.rating);
-    array.sort((a,b) => b.rating - a.rating);
     let topThreeMovies = [];
     for(let i=0; i<3;i++){
-        topThreeMovies.push(released[i]);
-        console.log(topThreeMovies.length);
+        topThreeMovies.push(releasedArray[i]);
+        console.log(topThreeMovies.length + topThreeMovies[i].title);
     }
-    console.log(topThreeMovies[0].rating+" "+topThreeMovies[1].rating+" "+topThreeMovies[2].rating);
-    const container = document.querySelector(".topThreeCards");   
-    movieCard.createMovieCardsFromArray(topThreeMovies, container);
+    const containerLeft = document.querySelector(".containerLeft");   
+    const containerRightTop = document.querySelector(".movieCardTop"); 
+    const containerRightBottom = document.querySelector(".movieCardBottom"); 
+
+    movieCard.createMovieCard(topThreeMovies[0].id, topThreeMovies[0].image, topThreeMovies[0].title, containerLeft);
+    movieCard.createMovieCard(topThreeMovies[1].id, topThreeMovies[1].image, topThreeMovies[1].title, containerRightTop);
+    movieCard.createMovieCard(topThreeMovies[2].id, topThreeMovies[2].image, topThreeMovies[2].title, containerRightBottom);
     movieCard.clickEventMovieModal(topThreeMovies);
 }
