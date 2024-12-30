@@ -12,6 +12,7 @@ const movieCard = {
      * @param {*} title The title to the card. Should be read from json.
      * @param {*} addMovieCardTo Which element the moviecard should be appended to.
      */
+
     createMovieCard (movieId, url, title, addMovieCardTo) {
 
         // create wrapper to contain moviecard
@@ -33,6 +34,7 @@ const movieCard = {
         // create button for movie cards
         const movieBtn = document.createElement('button');
         movieBtn.classList.add('movieBtn');
+        movieBtn.classList.add('hoverEffect');
 
         // create span to append into movieBtn
         const movieSpan = document.createElement('span');
@@ -60,6 +62,7 @@ const movieCard = {
      * Function to load create movie cards from the data in an array
      * @param {*} array Information to load data from.
      */
+
     createMovieCardsFromArray (array, appendMovieCardTo) {
         array.forEach(element => {
             this.createMovieCard(element.id, element.image, element.title, appendMovieCardTo);
@@ -67,6 +70,7 @@ const movieCard = {
     },
 
     /**
+
      * Function to create clickevent to open movieModal
      * @param {*} movieArray Array to find all the information that matches the id from. 
      */
@@ -108,6 +112,7 @@ const movieCard = {
             this.exitMovieModal(movieModal); // Pass the modal to the exit function
         });
     },
+
     /**
      * Function to exit the movie modal by removing it from the DOM.
      */

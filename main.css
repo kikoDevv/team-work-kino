@@ -323,6 +323,7 @@
   border: none;
   cursor: pointer;
   box-shadow: 0px 0px 2px 0.008px;
+  background-color: #101827;
 }
 .filterSection .filterMenu .tagsContainer .tags:hover {
   background-color: aqua;
@@ -449,6 +450,7 @@
 .footer .containerLeft p {
   font-family: "Work Sans", sans-serif;
   padding: 10px 0px;
+  font-size: large;
 }
 .footer .containerMid {
   display: grid;
@@ -458,6 +460,7 @@
 .footer .containerMid p {
   font-family: "Work Sans", sans-serif;
   padding: 10px 0px;
+  font-size: large;
 }
 .footer .containerRight {
   display: grid;
@@ -467,6 +470,7 @@
 .footer .containerRight p {
   font-family: "Work Sans", sans-serif;
   padding: 10px 0px;
+  font-size: large;
 }
 
 @keyframes shrink {
@@ -886,7 +890,7 @@ header .searchBar .searchBtn {
   top: 0px;
   width: 100%;
   height: 100%;
-  overflow-y: auto;
+  overflow: auto;
 }
 
 .exitBtn {
@@ -980,7 +984,7 @@ header .searchBar .searchBtn {
   place-self: center;
   font-family: sans-serif;
   margin-top: 50px;
-  color: #0e0e1b;
+  color: black;
 }
 
 .lineX {
@@ -989,30 +993,119 @@ header .searchBar .searchBtn {
 
 .topThree {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 10px;
+  grid-template-columns: 1fr 43vh;
+  gap: 5px;
   margin: 5%;
 }
 .topThree .imgLeft {
-  min-width: 100%;
-  min-height: 100%;
   max-width: 100%;
+  min-height: 100%;
   border-radius: 20px 0px 0px 20px;
 }
-.topThree .imgsRight {
-  display: grid;
-  grid-template-rows: 1fr 1fr;
-  gap: 10px;
-}
 .topThree .imgsRight .imgTop {
-  min-height: 100%;
-  min-height: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  min-width: 100%;
   border-radius: 0px 20px 0px 0px;
 }
 .topThree .imgsRight .imgBottom {
-  min-height: 100%;
-  min-height: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  min-width: 100%;
   border-radius: 0px 0px 20px 0px;
+}
+
+.upComingEvents {
+  display: grid;
+}
+.upComingEvents .eventLine {
+  margin: 50px 0px;
+}
+.upComingEvents h2 {
+  color: black;
+  margin-left: 50px;
+}
+.upComingEvents .cardsContainer {
+  margin: 0px 30px 0px 30px;
+  display: flex;
+  padding: 20px;
+  gap: 20px;
+}
+.upComingEvents .cardsContainer .eventCard {
+  display: grid;
+  background-color: #0e0e1b;
+  max-width: fit-content;
+  overflow: hidden;
+  border-radius: 10px;
+  padding-bottom: 20px;
+}
+.upComingEvents .cardsContainer .eventCard .eventInfo {
+  color: white;
+  margin-left: 10px;
+}
+.upComingEvents .cardsContainer .eventCard #eventBtn {
+  max-width: fit-content;
+  place-self: end;
+  margin-right: 20px;
+  padding: 5px 10px;
+  background-color: white;
+  color: black;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.upComingEvents .cardsContainer .eventCard #eventBtn:hover {
+  background-color: blue;
+  color: white;
+}
+
+footer {
+  background-color: #0e0e1b;
+  font-size: 1.5rem;
+  height: 100%;
+  width: 100%;
+}
+footer nav {
+  display: grid;
+  padding-top: 5rem;
+  grid-template-columns: 17rem 17rem 17rem auto;
+  grid-template-rows: auto auto auto;
+}
+footer .footerNav {
+  text-decoration: none;
+  color: #ffffff;
+  text-align: left;
+  padding: 0.5rem 5rem 0.5rem 5rem;
+  width: 100%;
+}
+footer .footerAboutUsLink {
+  grid-column: 1;
+  grid-row: 1;
+}
+footer .footerAllMoviesLink {
+  grid-column: 1;
+  grid-row: 2;
+}
+footer .footerInstagramLink {
+  grid-column: 2;
+  grid-row: 1;
+}
+footer .footerFacebookLink {
+  grid-column: 2;
+  grid-row: 2;
+}
+footer .footerXLink {
+  grid-column: 2;
+  grid-row: 3;
+  padding-bottom: 3rem;
+}
+footer .footerTosLink {
+  grid-column: 3;
+  grid-row: 1;
+}
+footer .footerPrivacyPolicyLink {
+  grid-column: 3;
+  grid-row: 2;
 }
 
 /*# sourceMappingURL=main.css.map */
