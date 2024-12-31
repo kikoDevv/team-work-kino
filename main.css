@@ -1166,36 +1166,37 @@ footer .footerPrivacyPolicyLink {
   justify-content: center;
   align-items: flex-start;
 }
-
-.movieWrapper {
+.allMovies .movieWrapper {
   background-color: #101827;
+  display: grid;
+  margin: 10px 0px 10px 0px;
   border-radius: 10px;
   overflow: hidden;
   width: 100%;
   height: 100%;
   transition: transform 0.2s, box-shadow 0.2s;
 }
-.movieWrapper:hover {
+.allMovies .movieWrapper:hover {
   box-shadow: 0 0 9px 4px rgba(255, 181, 9, 0.5);
   transform: scale(1.009);
 }
-.movieWrapper .movieImage {
+.allMovies .movieWrapper .movieImage {
   width: 100%;
   object-fit: cover;
 }
-.movieWrapper .cardInfo {
+.allMovies .movieWrapper .cardInfo {
   display: flex;
   flex-direction: column;
   padding: 10px;
   font-family: "Work Sans", sans-serif;
 }
-.movieWrapper .cardInfo .movieCardHeader {
+.allMovies .movieWrapper .cardInfo .movieCardHeader {
   color: white;
   text-align: center;
 }
-.movieWrapper .movieBtn {
+.allMovies .movieWrapper .movieBtn {
   max-width: fit-content;
-  place-self: center;
+  place-self: end;
   padding: 10px 10px;
   margin: 10px 10px 10px 10px;
   border: none;
@@ -1205,7 +1206,7 @@ footer .footerPrivacyPolicyLink {
   cursor: pointer;
   background-color: #2d7dfe;
 }
-.movieWrapper .movieBtn:hover {
+.allMovies .movieWrapper .movieBtn:hover {
   background-color: #ffb509;
   color: white;
 }
