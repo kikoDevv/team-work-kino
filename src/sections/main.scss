@@ -430,59 +430,62 @@ footer {
 //----------style of moviecards-----------
 .allMovies {
    display: flex;
-   flex-wrap: wrap; // Ensures wrapping for responsiveness
-   gap: 15px; // Adds spacing between items
-   justify-content: center; // Centers the items horizontally within the container
-   align-items: flex-start; // Aligns items vertically at the top
+   flex-direction: column; 
+   align-items: center; 
+   gap: 20px; 
+   margin: 20px; 
+}
 
-   .movieWrapper {
-      background-color: #101827;
-      display: grid;
-      margin: 10px 0px 10px 0px;
-      border-radius: 10px;
-      overflow: hidden;
-      width: 100%; // Set a fixed width for consistency
-      height: 100%; // Prevents overflow
-      transition: transform 0.2s, box-shadow 0.2s;
+.movies {
+   display: flex;
+   flex-wrap: wrap; 
+   gap: 15px; 
+   justify-content: center; 
+   align-items: flex-start; 
+}
 
-      &:hover {
-         box-shadow: 0 0 9px 4px rgba(255, 181, 9, 0.5);
-         transform: scale(1.009);
-      }
+.movieWrapper {
+   background-color: #101827;
+   display: grid;
+   margin: 10px 0;
+   border-radius: 10px;
+   overflow: hidden;
+   width: 300px; 
+   transition: transform 0.2s, box-shadow 0.2s;
+}
 
-      .movieImage {
-         width: 100%;
-         object-fit: cover;
-      }
+.movieWrapper:hover {
+   box-shadow: 0 0 9px 4px rgba(255, 181, 9, 0.5);
+   transform: scale(1.009);
+}
 
-      .cardInfo {
-         display: flex;
-         flex-direction: column;
-         padding: 10px;
-         font-family: 'Work Sans', sans-serif;
+.movieImage {
+   width: 100%;
+   object-fit: cover;
+}
 
-         .movieCardHeader {
-            color: white;
-            text-align: center;
-         }
-      }
+.movieCardHeader {
+   color: white;
+   text-align: center;
+   padding: 10px; 
+}
 
-      .movieBtn {
-         max-width: fit-content;
-         place-self: end;
-         padding: 10px 10px;
-         margin: 10px 10px 10px 10px;
-         border: none;
-         border-radius: 10px;
-         font-family: "Work Sans", sans-serif;
-         font-weight: bold;
-         cursor: pointer;
-         background-color: #2d7dfe;
+.movieBtn {
+   max-width: fit-content;
+   place-self: end;
+   padding: 10px;
+   margin: 10px;
+   border: none;
+   border-radius: 10px;
+   font-family: "Work Sans", sans-serif;
+   font-weight: bold;
+   cursor: pointer;
+   background-color: #2d7dfe;
+   color: white;
+   transition: background-color 0.2s;
+}
 
-         &:hover {
-            background-color: #ffb509;
-            color: white;
-         }
-      }
-   }
+.movieBtn:hover {
+   background-color: #ffb509;
+   color: white;
 }
