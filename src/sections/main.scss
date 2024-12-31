@@ -32,6 +32,7 @@ header {
       width: 95%;
       gap: 1rem;
    }
+
    .headerNav {
       display: flex;
       flex-wrap: wrap;
@@ -215,9 +216,11 @@ header {
    margin-top: 50px;
    color: black;
 }
+
 .lineX {
    margin-top: 50px;
 }
+
 .topThree {
    display: grid;
    // grid-template-columns: 1.5fr 1fr;
@@ -228,6 +231,7 @@ header {
    border-radius: 10px;
    user-select: none;
    box-shadow: black 0px 0px 9px 0.01px;
+
    button {
       padding: 10px 20px;
       border: none;
@@ -237,17 +241,21 @@ header {
       max-height: fit-content;
       background-color: blue;
       color: white;
+
       &:hover {
          background-color: white;
          color: black;
       }
    }
+
    .containerLeft {
       background-color: #0e0e1b;
+
       .imgLeft {
          &:hover {
             opacity: 0.8;
          }
+
          // outline: 5px solid red;
          width: 100%;
          height: 89%;
@@ -255,12 +263,14 @@ header {
          // min-height: 100%;
          // max-height: 100%;
       }
+
       .infoCard {
          display: flex;
          justify-content: space-between;
          padding: 5px 10px;
       }
    }
+
    .containerRight {
       display: grid;
       grid-template-rows: 1fr 1fr;
@@ -268,28 +278,35 @@ header {
 
       .movieCardTop {
          background-color: #0e0e1b;
+
          .imgTop {
             &:hover {
                opacity: 0.8;
             }
+
             max-width: 100%;
             max-height: 100%;
          }
+
          .infoCard {
             display: flex;
             justify-content: space-between;
             padding: 5px 10px;
          }
       }
+
       .movieCardBottom {
          background-color: #0e0e1b;
+
          .imgBottom {
             &:hover {
                opacity: 0.8;
             }
+
             max-width: 100%;
             max-height: 100%;
          }
+
          .infoCard {
             display: flex;
             justify-content: space-between;
@@ -298,21 +315,26 @@ header {
       }
    }
 }
+
 //------------Upcoming events----------
 .upComingEvents {
    display: grid;
+
    .eventLine {
       margin: 50px 0px;
    }
+
    h2 {
       color: black;
       margin-left: 50px;
    }
+
    .cardsContainer {
       margin: 0px 30px 0px 30px;
       display: flex;
       padding: 20px;
       gap: 20px;
+
       .eventCard {
          display: grid;
          background-color: #0e0e1b;
@@ -320,10 +342,12 @@ header {
          overflow: hidden;
          border-radius: 10px;
          padding-bottom: 20px;
+
          .eventInfo {
             color: white;
             margin-left: 10px;
          }
+
          #eventBtn {
             max-width: fit-content;
             place-self: end;
@@ -334,6 +358,7 @@ header {
             border: none;
             border-radius: 5px;
             cursor: pointer;
+
             &:hover {
                background-color: blue;
                color: white;
@@ -342,18 +367,21 @@ header {
       }
    }
 }
+
 //----------foter styling-----------
 footer {
    background-color: $backgroundColor;
    font-size: 1.5rem;
    height: 100%;
    width: 100%;
+
    nav {
       display: grid;
       padding-top: 5rem;
       grid-template-columns: 17rem 17rem 17rem auto;
       grid-template-rows: auto auto auto;
    }
+
    .footerNav {
       text-decoration: none;
       color: $textColor;
@@ -361,62 +389,98 @@ footer {
       padding: 0.5rem 5rem 0.5rem 5rem;
       width: 100%;
    }
+
    .footerAboutUsLink {
       grid-column: 1;
       grid-row: 1;
    }
+
    .footerAllMoviesLink {
       grid-column: 1;
       grid-row: 2;
    }
+
    .footerInstagramLink {
       grid-column: 2;
       grid-row: 1;
    }
+
    .footerFacebookLink {
       grid-column: 2;
       grid-row: 2;
    }
+
    .footerXLink {
       grid-column: 2;
       grid-row: 3;
       padding-bottom: 3rem;
    }
+
    .footerTosLink {
       grid-column: 3;
       grid-row: 1;
    }
+
    .footerPrivacyPolicyLink {
       grid-column: 3;
       grid-row: 2;
    }
 }
 
-//----------foter of moviecards-----------
-.addMovieCardTo {
-   display: grid;
-   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
-   gap: 15px; 
-   justify-items:center; 
+//----------style of moviecards-----------
+.allMovies {
+   display: flex;
+   flex-wrap: wrap; // Ensures wrapping for responsiveness
+   gap: 15px; // Adds spacing between items
+   justify-content: center; // Centers the items horizontally within the container
+   align-items: flex-start; // Aligns items vertically at the top
 }
 
 .movieWrapper {
-   display: grid;
    background-color: #101827;
    border-radius: 10px;
    overflow: hidden;
-   width: 100%;
-   max-width: 100%; 
+   width: 100%; // Set a fixed width for consistency
+   height: 100%; // Prevents overflow
    transition: transform 0.2s, box-shadow 0.2s;
 
    &:hover {
-       box-shadow: 0 0 9px 4px rgba(255, 181, 9, 0.5);
-       transform: scale(1.009);
+      box-shadow: 0 0 9px 4px rgba(255, 181, 9, 0.5);
+      transform: scale(1.009);
    }
 
    .movieImage {
-       width: 100%;
-       object-fit: cover;
+      width: 100%;
+      object-fit: cover;
    }
 
+   .cardInfo {
+      display: flex;
+      flex-direction: column;
+      padding: 10px;
+      font-family: 'Work Sans', sans-serif;
 
+      .movieCardHeader {
+         color: white;
+         text-align: center;
+      }
+   }
+
+   .movieBtn {
+      max-width: fit-content;
+      place-self: center;
+      padding: 10px 10px;
+      margin: 10px 10px 10px 10px;
+      border: none;
+      border-radius: 10px;
+      font-family: "Work Sans", sans-serif;
+      font-weight: bold;
+      cursor: pointer;
+      background-color: #2d7dfe;
+
+      &:hover {
+         background-color: #ffb509;
+         color: white;
+      }
+   }
+}
