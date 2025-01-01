@@ -23,37 +23,37 @@ const array = [
     "language": "English, Spanish"
   },
   {
-    trailer: "https://www.youtube.com/embed/dtKMEAXyPkg",
     "id": 2,
     "comingSoon": false,
-    "title": "Avatar",
-    "releaseYear": 2009,
-    "description": "A paraplegic marine dispatched to the moon Pandora on a unique mission becomes torn between following his orders and protecting the world he feels is his home.",
+    "title": "I Am Legend",
+    "releaseYear": 2007,
+    "description": "Years after a plague kills most of humanity and transforms the rest into monsters, the sole survivor in New York City struggles valiantly to find a cure.",
+    "trailer": "https://www.youtube.com/embed/dtKMEAXyPkg",
     "image": "https://placecats.com/640/480",
-    "rating":3,
-    "genre": "Action, Adventure, Fantasy",
-    "runtime": "162 min",
+    "rating": 7.2,
+    "genre": "Drama, Horror, Sci-Fi",
+    "runtime": "101 min",
     "rated": "PG-13",
-    "director": "James Cameron",
-    "actors": "Sam Worthington, Zoe Saldana, Sigourney Weaver, Stephen Lang",
-    "language": "English, Spanish"
-  },
-  {
-    trailer: "https://www.youtube.com/embed/dtKMEAXyPkg",
+    "director": "Francis Lawrence",
+    "actors": "Will Smith, Alice Braga, Charlie Tahan, Salli Richardson-Whitfield",
+    "language": "English"
+},
+{
     "id": 3,
     "comingSoon": false,
-    "title": "Avatar",
-    "releaseYear": 2009,
-    "description": "A paraplegic marine dispatched to the moon Pandora on a unique mission becomes torn between following his orders and protecting the world he feels is his home.",
+    "title": "300",
+    "releaseYear": 2006,
+    "description": "King Leonidas of Sparta and a force of 300 men fight the Persians at Thermopylae in 480 B.C.",
+    "trailer": "https://www.youtube.com/embed/UrIbxk7idYA",
     "image": "https://placecats.com/640/480",
-    "rating": 6,
-    "genre": "Action, Adventure, Fantasy",
-    "runtime": "162 min",
-    "rated": "PG-13",
-    "director": "James Cameron",
-    "actors": "Sam Worthington, Zoe Saldana, Sigourney Weaver, Stephen Lang",
-    "language": "English, Spanish"
-  }
+    "rating": 7.7,
+    "genre": "Action, Drama, Fantasy",
+    "runtime": "117 min",
+    "rated": "R",
+    "director": "Zack Snyder",
+    "actors": "Gerard Butler, Lena Headey, Dominic West, David Wenham",
+    "language": "English"
+}
 ];
 
 // create cards from all the elements in an array.
