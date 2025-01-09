@@ -28,8 +28,11 @@
       <header>
          <img
             class="kinoLogo"
-            src="Pictures/logo_header_computer.png"
-            alt="logotyp for ESC" />
+            src="Pictures/logoHead.png"
+            alt="logotyp för Kino" usemap="#logoMap"/>
+            <map name="logoMap">
+              <area shape="rect" coords="225,10,573,143" href="index.html" alt="Kino">
+            </map>
          <div class="navContainer">
             <nav class="headerNav">
                <a href="moviesPage.html" class="headerNavItem">
@@ -53,6 +56,7 @@
          </div>
          
       </header>
+
       <main>
          <section class="upperSection">
             <figure class="cinemaSeats">
@@ -63,15 +67,18 @@
             </figure>
             <button type="button" class="allMoviesBtn">Show all movies</button>
             <h2 class="topTitle">Top three movies</h2>
-            <hr class="lineX">
+            <hr class="lineX" />
             <figure class="topThree">
-               <img class="imgLeft" src="Pictures/redOne.jpg" alt="Image not found"/>
+               <div class="containerLeft">
+               </div>
                <!--smaller image top-->
-              <div class="imgsRight">
-                <img class="imgTop" src="Pictures/joker.jpeg" alt="Image not found"/>
-                <!--smaller image down-->
-                <img class="imgBottom" src="Pictures/spiderman.jpg" alt="Image not found"/>
-              </div>
+               <div class="containerRight">
+                  <div class="movieCardTop">
+                  </div>
+                  <!--smaller image down-->
+                  <div class="movieCardBottom">
+                  </div>
+               </div>
             </figure>
          </section>
          <section class="mid">
@@ -83,6 +90,7 @@
                </form>
             </section>
             <section class="allMovies">
+               <h2 class="topTitle">All Movies</h2>
                <figure class="movies">
                   <!--
           Here goes all movies.
@@ -94,11 +102,39 @@
             </section>
          </section>
          <section class="lowerSection">
-            <figure class="uppKommingMovies">
+            <figure class="upComingMovies">
                <!--up coming movies here-->
             </figure>
-            <div class="uppKommingEvents">
+            <div class="upComingEvents">
                <!--All the events here-->
+               <hr class="eventLine" />
+               <h2>Kommande evenemang</h2>
+               <div class="cardsContainer">
+                  <div class="eventCard">
+                     <img
+                        class="eventImg"
+                        src="Pictures/event1.png"
+                        alt="Event image not found" />
+                     <p class="eventInfo">
+                        Here goes the information about event
+                     </p>
+                     <button id="eventBtn" class="fa-solid fa-film">
+                        Ticket
+                     </button>
+                  </div>
+                  <div class="eventCard">
+                     <img
+                        class="eventImg"
+                        src="Pictures/event2.png"
+                        alt="Event image not found" />
+                     <p class="eventInfo">
+                        Here goes the information about event
+                     </p>
+                     <button id="eventBtn" class="fa-solid fa-film">
+                        Ticket
+                     </button>
+                  </div>
+               </div>
             </div>
          </section>
       </main>
