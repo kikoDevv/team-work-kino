@@ -73,6 +73,13 @@ let released = movies.released;
 let upcoming = movies.upcoming;
 console.log(released);
 console.log(upcoming);
+
+
+document.getElementsByClassName("allMoviesBtn").addEventListener("click", function() {
+    window.location.href = "moviesPage.html"; 
+  });
+  
+
 findTopThreeMovies();
 
 
@@ -100,3 +107,4 @@ async function findTopThreeMovies(){
     movieCard.createMovieCard(topThreeMovies[2].id, topThreeMovies[2].image, topThreeMovies[2].title, containerRightBottom);
     movieCard.clickEventMovieModal(topThreeMovies);
 }
+
