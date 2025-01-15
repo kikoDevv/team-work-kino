@@ -22,9 +22,8 @@ app.get("/", async (req, res) => {
     const response = await fetch(
       "https://plankton-app-xhkom.ondigitalocean.app/api/movies"
     );
-    const movies = await response.json();
-    console.log(movies);
-    res.render("index.ejs", { title: "Välkommen till kino!" });
+    const { data } = await response.json();
+    res.render("index.ejs", { movies: data });
   } catch (error) {
     console.error("Error fetching movies:", error);
     res.status(500).send("Could not fetch movies");

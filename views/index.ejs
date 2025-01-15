@@ -92,13 +92,23 @@
          -->
           </form>
         </section>
-        <section class="allMovies">
+        <section class="allMovies flex">
           <h2 class="topTitle">All Movies</h2>
-          <figure class="movies">
-            <!--
-          Here goes all movies.
-          --></figure>
+          <figure class="movies flex">
+            <% movies.forEach(movie => { %>
+            <article id="<%= movie.id %>" class="movieWrapper grid">
+              <img
+                class="movieImage"
+                src="<%= movie.attributes.image.url %>"
+                alt="<%= movie.attributes.title %>"
+              />
+              <h2 class="movieCardHeader"><%= movie.attributes.title %></h2>
+              <button class="movieBtn hoverEffect">Learn More</button>
+            </article>
+            <% }); %>
+          </figure>
         </section>
+
         <section class="extraSection">
           <!-- here goes all the cards like present card 4DX!...-->
         </section>
