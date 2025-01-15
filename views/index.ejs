@@ -103,7 +103,9 @@
                 alt="<%= movie.attributes.title %>"
               />
               <h2 class="movieCardHeader"><%= movie.attributes.title %></h2>
-              <button class="movieBtn hoverEffect">Learn More</button>
+              <button class="movieBtn hoverEffect">
+                <a href="/movies/<%= movie.id %>"> Learn More</a>
+              </button>
             </article>
             <% }); %>
           </figure>
