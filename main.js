@@ -74,14 +74,24 @@ let upcoming = movies.upcoming;
 console.log(released);
 console.log(upcoming);
 
+findTopThreeMovies();
+showAllMovies();
 
 document.getElementsByClassName("allMoviesBtn").addEventListener("click", function() {
     window.location.href = "moviesPage.html"; 
   });
   
 
-findTopThreeMovies();
 
+
+async function showAllMovies() {
+  console.log("In all movies");
+  const releasedArray = [];
+  const response = await fetch("content/movies.json");
+  const data = await response.json();
+  movieCard.createMovieCardsFromArray(data, figureCard);
+  movieCard.clickEventMovieModal(data);
+}
 
 async function findTopThreeMovies(){
     const releasedArray = [];
