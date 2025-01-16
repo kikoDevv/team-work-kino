@@ -38,8 +38,17 @@ app.get("/movies/:id", async (req, res) => {
     const response = await fetch(
       `https://plankton-app-xhkom.ondigitalocean.app/api/movies/${id}`
     );
+
+    // Berättar om filmen inte hittas
+    if (!response.ok) {
+      return res.status(404).send("<h1>Movie not found!</h1>");
+    }
     const { data } = await response.json();
-    res.send("Hello");
+    res.render("movie.ejs", {
+      title: data.attributes.title,
+      img: data.attributes.image.url,
+      description: data.attributes.intro,
+    });
     console.log(data);
   } catch (error) {
     console.error("Error fetching movie:", error);
