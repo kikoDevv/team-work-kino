@@ -1271,4 +1271,11 @@ footer .footerPrivacyPolicyLink {
   max-width: 800px;
 }
 
+.exitButton {
+  position: absolute;
+  right: 2rem;
+  top: 2rem;
+  font-size: xx-large;
+  text-decoration: none;
+}
 /*# sourceMappingURL=main.css.map */
