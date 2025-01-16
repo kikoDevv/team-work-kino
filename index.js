@@ -2,6 +2,7 @@ import express from "express";
 import path from "path";
 import morgan from "morgan";
 import fetch from "node-fetch";
+import { marked } from "marked";
 
 const app = express();
 const port = 5080;
@@ -43,12 +44,17 @@ app.get("/movies/:id", async (req, res) => {
     if (!response.ok) {
       return res.status(404).send("<h1>Movie not found!</h1>");
     }
+
     const { data } = await response.json();
+
+    const markedIntro = marked(data.attributes.intro);
+
     res.render("movie.ejs", {
       title: data.attributes.title,
       img: data.attributes.image.url,
-      description: data.attributes.intro,
+      description: markedIntro,
     });
+
     console.log(data);
   } catch (error) {
     console.error("Error fetching movie:", error);
