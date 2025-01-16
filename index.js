@@ -47,6 +47,7 @@ app.get("/movies/:id", async (req, res) => {
 
     const { data } = await response.json();
 
+    //Läser markdown språk och konverterar till html
     const markedIntro = marked(data.attributes.intro);
 
     res.render("movie.ejs", {

@@ -29,39 +29,7 @@
   </head>
 
   <body>
-    <header>
-      <img
-        class="kinoLogo"
-        src="/images/logoHead.png"
-        alt="logotyp för Kino"
-        usemap="#logoMap"
-      />
-      <map name="logoMap">
-        <area
-          shape="rect"
-          coords="225,10,573,143"
-          href="index.html"
-          alt="Kino"
-        />
-      </map>
-      <div class="navContainer">
-        <nav class="headerNav">
-          <a href="/moviesPage" class="headerNavItem"> See all movies</a>
-          <a href="#" class="headerNavItem">Link</a>
-          <a href="#" class="headerNavItem">Link</a>
-          <a href="#" class="headerNavItem">Link</a>
-          <a href="#" class="headerNavItem">Link</a>
-          <a href="#" class="headerNavItem">Link</a>
-          <a href="#" class="headerNavItem">Link</a>
-          <a href="#" class="headerNavItem">Link</a>
-        </nav>
-        <div class="searchBar">
-          <input type="search" placeholder="Search..." class="searchInput" />
-          <button class="searchBtn">Search</button>
-        </div>
-      </div>
-    </header>
-
+    <%- include("header.ejs") %>
     <main>
       <section class="upperSection">
         <figure class="cinemaSeats">
@@ -178,16 +146,6 @@
         <figcaption>-Frida Karlsson</figcaption>
       </figure>
     </section>
-    <footer>
-      <nav>
-        <a href="#" class="footerNav footerAboutUsLink">Om oss</a>
-        <a href="#" class="footerNav footerAllMoviesLink">Alla filmer</a>
-        <a href="#" class="footerNav footerInstagramLink">Instagram</a>
-        <a href="#" class="footerNav footerFacebookLink">Facebook</a>
-        <a href="#" class="footerNav footerXLink">X</a>
-        <a href="#" class="footerNav footerTosLink">ToS</a>
-        <a href="#" class="footerNav footerPrivacyPolicyLink">Privacy policy</a>
-      </nav>
-    </footer>
+    <%- include('footer.ejs') %>
   </body>
 </html>
