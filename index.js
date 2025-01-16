@@ -46,6 +46,11 @@ app.get("/movies/:id", async (req, res) => {
   }
 });
 
+//Renderar moviesPage
+app.get("/moviesPage", (req, res) => {
+  res.render("moviesPage.ejs");
+});
+
 // Startar servern
 app.listen(port, () => {
   console.log(`The server is running on http://localhost:${port}`);
