@@ -77,10 +77,10 @@ console.log(upcoming);
 findTopThreeMovies();
 showAllMovies();
 
-document.getElementsByClassName("allMoviesBtn").addEventListener("click", function() {
-    window.location.href = "moviesPage.html"; 
+document.querySelector(".allMoviesBtn").addEventListener("click", function() {
+    window.location.href = "moviesPage.html";
   });
-  
+
 
 
 
@@ -108,13 +108,12 @@ async function findTopThreeMovies(){
         topThreeMovies.push(releasedArray[i]);
         console.log(topThreeMovies.length + topThreeMovies[i].title);
     }
-    const containerLeft = document.querySelector(".containerLeft");   
-    const containerRightTop = document.querySelector(".movieCardTop"); 
-    const containerRightBottom = document.querySelector(".movieCardBottom"); 
+    const containerLeft = document.querySelector(".containerLeft");
+    const containerRightTop = document.querySelector(".movieCardTop");
+    const containerRightBottom = document.querySelector(".movieCardBottom");
 
     movieCard.createMovieCard(topThreeMovies[0].id, topThreeMovies[0].image, topThreeMovies[0].title, containerLeft);
     movieCard.createMovieCard(topThreeMovies[1].id, topThreeMovies[1].image, topThreeMovies[1].title, containerRightTop);
     movieCard.createMovieCard(topThreeMovies[2].id, topThreeMovies[2].image, topThreeMovies[2].title, containerRightBottom);
     movieCard.clickEventMovieModal(topThreeMovies);
 }
-

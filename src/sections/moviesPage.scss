@@ -142,35 +142,6 @@
       border-radius: 0px 30px 30px 0px;
    }
 }
-//---------------------UpperSection-ended-------------
-//--------------------avatarSection----------------
-.avatarSection {
-   position: relative;
-   .highlightsImgs {
-      max-width: 100%;
-   }
-   .avatarImg {
-      position: absolute;
-      max-width: 60%;
-      min-height: 50%;
-      top: 30%;
-      left: 40%;
-      animation: slide both linear;
-      animation-timeline: view();
-   }
-}
-@keyframes slide {
-   0% {
-      left: 40%;
-   }
-   50% {
-      left: 20%;
-   }
-   100% {
-      left: 18%;
-   }
-}
-//--------------------AvatarSection-ended------
 //--------------------rollingSections----------------
 .scrollingSections {
    display: grid;
@@ -410,7 +381,6 @@
       }
    }
 }
-//--------------filter menu neded---------------
 //--------------------movie cards---------------------
 .moviesLine {
    margin: 100px 0px;
@@ -473,7 +443,6 @@
       }
    }
 }
-//-----------movie cards enden-------------
 //-----------------------footer---------------
 .footer {
    padding: 0px 50px 100px 0px;

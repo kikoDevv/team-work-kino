@@ -133,33 +133,6 @@
     border-radius: 0px 30px 30px 0px;
   }
 }
-.avatarSection {
-  position: relative;
-}
-.avatarSection .highlightsImgs {
-  max-width: 100%;
-}
-.avatarSection .avatarImg {
-  position: absolute;
-  max-width: 60%;
-  min-height: 50%;
-  top: 30%;
-  left: 40%;
-  animation: slide both linear;
-  animation-timeline: view();
-}
-
-@keyframes slide {
-  0% {
-    left: 40%;
-  }
-  50% {
-    left: 20%;
-  }
-  100% {
-    left: 18%;
-  }
-}
 .scrollingSections {
   display: grid;
 }
@@ -870,6 +843,10 @@ header .searchBar .searchBtn {
   font-family: "Roboto", serif;
 }
 
+.upperSection {
+  display: grid;
+}
+
 .skiReviewerSection {
   background-color: #0e0e1b;
   width: 100vw;
@@ -893,16 +870,25 @@ header .searchBar .searchBtn {
   overflow: auto;
 }
 
-.allMoviesBtn {
+.upperSection .cinemaSeats {
+  position: relative;
+}
+.upperSection .cinemaSeats .picUnderNav {
+  width: 100%;
+  height: 90vh;
+}
+.upperSection .cinemaSeats .allMoviesBtn {
   position: absolute;
-  left: 70%;
-  margin: 1rem;
+  bottom: -40px;
+  left: 45%;
+  transform: translateY(-50%);
   border: none;
   background-color: #175dcc;
   color: white;
   font-size: 1.5rem;
   padding: 0.5rem;
-  top: 0px;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
 .exitBtn {

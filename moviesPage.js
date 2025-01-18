@@ -1,7 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
     const filterBtn = document.querySelector(".filterBtn");
     const filterMenu = document.querySelector(".filterMenu");
-
     // Event listener for filter menu toggle
     filterBtn.addEventListener("click", () => {
         if (filterMenu.classList.value === "filterMenu") {
