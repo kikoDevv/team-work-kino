@@ -75,10 +75,7 @@ header {
 	padding: 0px;
 	font-family: "Roboto", serif;
 }
-//-----------upperSection-----------
-.upperSection {
-	display: grid;
-}
+
 
 .skiReviewerSection {
 	background-color: $backgroundColor;
@@ -102,9 +99,9 @@ header {
 	height: 100%;
 	overflow: auto;
 }
-
-//----------picture under navbar and bnt----------
 .upperSection {
+   display: grid;
+   //----------picture under navbar and bnt----------
 	.cinemaSeats {
       position: relative;
 		.picUnderNav {
@@ -125,6 +122,11 @@ header {
 			cursor: pointer;
 		}
 	}
+   //-------------top 3-------------
+   .lineX {
+      margin-top: 10px;
+   }
+
 }
 .exitBtn {
 	color: white;
@@ -243,11 +245,6 @@ header {
 	margin-top: 50px;
 	color: black;
 }
-
-.lineX {
-	margin-top: 50px;
-}
-
 .topThree {
 	display: grid;
 	// grid-template-columns: 1.5fr 1fr;
@@ -260,17 +257,17 @@ header {
 	box-shadow: black 0px 0px 9px 0.01px;
 
 	button {
-		padding: 10px 20px;
+		padding: 10px 10px;
 		border: none;
 		font-family: sans-serif;
 		border-radius: 7px;
 		cursor: pointer;
 		max-height: fit-content;
-		background-color: blue;
+		background-color: #2d7dfe;
 		color: white;
 
 		&:hover {
-			background-color: white;
+			background-color: #ffb509;
 			color: black;
 		}
 	}
@@ -368,29 +365,32 @@ header {
 			max-width: fit-content;
 			overflow: hidden;
 			border-radius: 10px;
-			padding-bottom: 20px;
+			padding-bottom: 10px;
 
 			.eventInfo {
 				color: white;
 				margin-left: 10px;
+            padding-top: 20px;
 			}
 
-			#eventBtn {
-				max-width: fit-content;
-				place-self: end;
-				margin-right: 20px;
-				padding: 5px 10px;
-				background-color: white;
-				color: black;
-				border: none;
-				border-radius: 5px;
-				cursor: pointer;
-
-				&:hover {
-					background-color: blue;
-					color: white;
-				}
-			}
+         .eventBtn {
+            max-width: fit-content;
+            place-self: end;
+            padding: 10px;
+            margin: 0px 10px;
+            border: none;
+            border-radius: 10px;
+            font-family: "Work Sans", sans-serif;
+            font-weight: bold;
+            cursor: pointer;
+            background-color: #2d7dfe;
+            color: white;
+            transition: background-color 0.2s;
+            &:hover {
+               background-color: #ffb509;
+               color: white;
+            }
+         }
 		}
 	}
 }
@@ -511,8 +511,7 @@ footer {
 	color: white;
 	transition: background-color 0.2s;
 }
-
 .movieBtn:hover {
-	background-color: #ffb509;
-	color: white;
+   background-color: #ffb509;
+   color: white;
 }
