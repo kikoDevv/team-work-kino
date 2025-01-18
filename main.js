@@ -97,7 +97,8 @@ async function findTopThreeMovies() {
 	const releasedArray = [];
 	const response = await fetch("content/movies.json");
 	const data = await response.json();
-	const top = data.slice(0, 3);
+  const sortedMovies = data.sort((a, b) => b.rating - a.rating);
+  const top = sortedMovies.slice(0, 3);
 	generateTopThree(top);
 	console.log(data);
 }
